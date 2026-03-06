@@ -69,12 +69,84 @@ function Navbar() {
                         { name: 'Amazon Bikini Photography', path: '/services/amazon-photography' },
                     ]
                 },
-                { name: 'Flipkart', path: '/market-place/Flipkart' },
-                { name: 'Myntra', path: '/market-place/Myntra' },
-                { name: 'Meesho', path: '/market-place/Meesho' },
-                { name: 'Ajio', path: '/market-place/Ajio' },
-                { name: 'Tata cliq', path: '/market-place/Tata cliq' },
-                { name: 'Etsy', path: '/market-place/Etsy' },
+                {
+                    name: 'Flipkart',
+                    path: '/market-place/Flipkart',
+                    subItems: [
+                        { name: 'Flipkart Product Photography', path: '/market-place/Flipkart' },
+                        { name: 'Flipkart Footwear Photography', path: '/market-place/Flipkart' },
+                        { name: 'Flipkart Fashion Photography', path: '/market-place/Flipkart' },
+                        { name: 'Flipkart Medical Photography', path: '/market-place/Flipkart' },
+                        { name: 'Flipkart Electronics Photography', path: '/market-place/Flipkart' },
+                        { name: 'Flipkart Grocery Photography', path: '/market-place/Flipkart' },
+                        { name: 'Flipkart Furniture Photography', path: '/market-place/Flipkart' },
+                        { name: 'Flipkart Automotive Photography', path: '/market-place/Flipkart' },
+                        { name: 'Flipkart Bikini Photography', path: '/market-place/Flipkart' },
+                    ]
+                },
+                {
+                    name: 'Myntra',
+                    path: '/market-place/Myntra',
+                    subItems: [
+                        { name: 'Myntra Product Photography', path: '/market-place/Myntra' },
+                        { name: 'Myntra Footwear Photography', path: '/market-place/Myntra' },
+                        { name: 'Myntra Fashion & Model Photography', path: '/market-place/Myntra' },
+                        { name: 'Myntra Bikini Photoshoot', path: '/market-place/Myntra' },
+                    ]
+                },
+                {
+                    name: 'Meesho',
+                    path: '/market-place/Meesho',
+                    subItems: [
+                        { name: 'Meesho Product Photography', path: '/market-place/Meesho' },
+                        { name: 'Meesho Footwear Photography', path: '/market-place/Meesho' },
+                        { name: 'Meesho Fashion Photography', path: '/market-place/Meesho' },
+                        { name: 'Meesho E-Commerce Photography', path: '/market-place/Meesho' },
+                        { name: 'Meesho Electronics Photography', path: '/market-place/Meesho' },
+                        { name: 'Meesho Furniture Photography', path: '/market-place/Meesho' },
+                        { name: 'Meesho Automotive Photography', path: '/market-place/Meesho' },
+                        { name: 'Meesho Bikini Photography', path: '/market-place/Meesho' },
+                    ]
+                },
+                {
+                    name: 'Ajio',
+                    path: '/market-place/Ajio',
+                    subItems: [
+                        { name: 'Ajio Product Photography', path: '/market-place/Ajio' },
+                        { name: 'Ajio Footwear Photography', path: '/market-place/Ajio' },
+                        { name: 'Ajio Fashion Photography', path: '/market-place/Ajio' },
+                        { name: 'Ajio Bikini Photography', path: '/market-place/Ajio' },
+                    ]
+                },
+                {
+                    name: 'Tata cliq',
+                    path: '/market-place/Tata cliq',
+                    subItems: [
+                        { name: 'Tatacliq Product Photography', path: '/market-place/Tata cliq' },
+                        { name: 'Tatacliq Footwear Photography', path: '/market-place/Tata cliq' },
+                        { name: 'Tatacliq Fashion Photography', path: '/market-place/Tata cliq' },
+                        { name: 'Tatacliq Bikini Photography', path: '/market-place/Tata cliq' },
+                        { name: 'Tatacliq E-Commerce Photography', path: '/market-place/Tata cliq' },
+                        { name: 'Tatacliq Furniture Photography', path: '/market-place/Tata cliq' },
+                        { name: 'Tatacliq Cosmetic Photography', path: '/market-place/Tata cliq' },
+                        { name: 'Tatacliq Medical Photography', path: '/market-place/Tata cliq' },
+                        { name: 'Tatacliq Electronics Photography', path: '/market-place/Tata cliq' },
+                    ]
+                },
+                {
+                    name: 'Etsy',
+                    path: '/market-place/Etsy',
+                    subItems: [
+                        { name: 'Etsy Footwear Photography', path: '/market-place/Etsy' },
+                        { name: 'Etsy Fashion Photography', path: '/market-place/Etsy' },
+                        { name: 'Etsy Bikini Photography', path: '/market-place/Etsy' },
+                        { name: 'Etsy Electronics Photography', path: '/market-place/Etsy' },
+                        { name: 'Etsy Furniture Photography', path: '/market-place/Etsy' },
+                        { name: 'Etsy Handicraft Photography', path: '/market-place/Etsy' },
+                        { name: 'Etsy E-Commerce Photography', path: '/market-place/Etsy' },
+                        { name: 'Etsy Freelance Photography', path: '/market-place/Etsy' },
+                    ]
+                },
             ]
         },
         {
@@ -103,7 +175,7 @@ function Navbar() {
                 <div className={`nav-center ${isMenuOpen ? 'mobile-open' : ''}`}>
                     {navLinks.map((link, index) => (
                         link.type === 'dropdown' ? (
-                            <div className="nav-item dropdown" key={index}>
+                            <div className={`nav-item dropdown${link.name === 'Services' ? ' services-dropdown' : ''}`} key={index}>
                                 <div className={`nav-link ${link.active ? 'active' : ''}`}>
                                     {link.name} <ChevronDown size={12} className="dropdown-arrow" />
                                 </div>
