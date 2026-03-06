@@ -74,14 +74,14 @@ function Navbar() {
                     path: '/market-place/Flipkart',
                     subItems: [
                         { name: 'Flipkart Product Photography', path: '/market-place/Flipkart' },
-                        { name: 'Flipkart Footwear Photography', path: '/market-place/Flipkart' },
-                        { name: 'Flipkart Fashion Photography', path: '/market-place/Flipkart' },
-                        { name: 'Flipkart Medical Photography', path: '/market-place/Flipkart' },
-                        { name: 'Flipkart Electronics Photography', path: '/market-place/Flipkart' },
-                        { name: 'Flipkart Grocery Photography', path: '/market-place/Flipkart' },
-                        { name: 'Flipkart Furniture Photography', path: '/market-place/Flipkart' },
-                        { name: 'Flipkart Automotive Photography', path: '/market-place/Flipkart' },
-                        { name: 'Flipkart Bikini Photography', path: '/market-place/Flipkart' },
+                        { name: 'Flipkart Footwear Photography', path: '/market-place/flipkart-footwear' },
+                        { name: 'Flipkart Fashion Photography', path: '/market-place/flipkart-fashion' },
+                        { name: 'Flipkart Medical Photography', path: '/market-place/flipkart-medical' },
+                        { name: 'Flipkart Electronics Photography', path: '/market-place/flipkart-electronics' },
+                        { name: 'Flipkart Grocery Photography', path: '/market-place/flipkart-grocery' },
+                        { name: 'Flipkart Furniture Photography', path: '/market-place/flipkart-furniture' },
+                        { name: 'Flipkart Automotive Photography', path: '/market-place/flipkart-automotive' },
+                        { name: 'Flipkart Bikini Photography', path: '/market-place/flipkart-bikini' },
                     ]
                 },
                 {
