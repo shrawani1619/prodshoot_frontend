@@ -13,6 +13,10 @@ import FlipkartGrocery from './pages/FlipkartGrocery.jsx'
 import FlipkartFurniture from './pages/FlipkartFurniture.jsx'
 import FlipkartAutomotive from './pages/FlipkartAutomotive.jsx'
 import FlipkartBikini from './pages/FlipkartBikini.jsx'
+import MyntraPhotography from './pages/MyntraPhotography.jsx'
+import MyntraFootwear from './pages/MyntraFootwear.jsx'
+import MyntraFashionModel from './pages/MyntraFashionModel.jsx'
+import MyntraBikini from './pages/MyntraBikini.jsx'
 import ProductPhotography from './pages/ProductPhotography.jsx'
 import WhiteBackground from './pages/WhiteBackground.jsx'
 import HeroShots from './pages/HeroShots.jsx'
@@ -48,6 +52,10 @@ createRoot(document.getElementById('root')).render(
         <Route path="/market-place/flipkart-furniture" element={<FlipkartFurniture />} />
         <Route path="/market-place/flipkart-automotive" element={<FlipkartAutomotive />} />
         <Route path="/market-place/flipkart-bikini" element={<FlipkartBikini />} />
+        <Route path="/market-place/Myntra" element={<MyntraPhotography />} />
+        <Route path="/market-place/myntra-footwear" element={<MyntraFootwear />} />
+        <Route path="/market-place/myntra-fashion-model" element={<MyntraFashionModel />} />
+        <Route path="/market-place/myntra-bikini" element={<MyntraBikini />} />
         <Route path="/services/white-background" element={<WhiteBackground />} />
         <Route path="/services/hero-shots" element={<HeroShots />} />
         <Route path="/services/lifestyle-photography" element={<LifestylePhotography />} />
