@@ -4,6 +4,15 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './index.css'
 import App from './App.jsx'
 import AmazonPhotography from './pages/AmazonPhotography.jsx'
+import FlipkartPhotography from './pages/FlipkartPhotography.jsx'
+import FlipkartFootwear from './pages/FlipkartFootwear.jsx'
+import FlipkartFashion from './pages/FlipkartFashion.jsx'
+import FlipkartMedical from './pages/FlipkartMedical.jsx'
+import FlipkartElectronics from './pages/FlipkartElectronics.jsx'
+import FlipkartGrocery from './pages/FlipkartGrocery.jsx'
+import FlipkartFurniture from './pages/FlipkartFurniture.jsx'
+import FlipkartAutomotive from './pages/FlipkartAutomotive.jsx'
+import FlipkartBikini from './pages/FlipkartBikini.jsx'
 import ProductPhotography from './pages/ProductPhotography.jsx'
 import WhiteBackground from './pages/WhiteBackground.jsx'
 import HeroShots from './pages/HeroShots.jsx'
@@ -30,6 +39,15 @@ createRoot(document.getElementById('root')).render(
         <Route path="/" element={<App />} />
         <Route path="/services/product-photography" element={<ProductPhotography />} />
         <Route path="/services/amazon-photography" element={<AmazonPhotography />} />
+        <Route path="/market-place/Flipkart" element={<FlipkartPhotography />} />
+        <Route path="/market-place/flipkart-footwear" element={<FlipkartFootwear />} />
+        <Route path="/market-place/flipkart-fashion" element={<FlipkartFashion />} />
+        <Route path="/market-place/flipkart-medical" element={<FlipkartMedical />} />
+        <Route path="/market-place/flipkart-electronics" element={<FlipkartElectronics />} />
+        <Route path="/market-place/flipkart-grocery" element={<FlipkartGrocery />} />
+        <Route path="/market-place/flipkart-furniture" element={<FlipkartFurniture />} />
+        <Route path="/market-place/flipkart-automotive" element={<FlipkartAutomotive />} />
+        <Route path="/market-place/flipkart-bikini" element={<FlipkartBikini />} />
         <Route path="/services/white-background" element={<WhiteBackground />} />
         <Route path="/services/hero-shots" element={<HeroShots />} />
         <Route path="/services/lifestyle-photography" element={<LifestylePhotography />} />
