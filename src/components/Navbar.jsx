@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, Menu, X, ArrowUpRight } from 'lucide-react';
 
 function Navbar() {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
     const location = useLocation();
     const currentPath = location.pathname;
 
@@ -11,70 +13,165 @@ function Navbar() {
     const isService = currentPath.startsWith('/services/');
     const isIndustry = currentPath.startsWith('/market-place/');
 
+    // Handle scroll for sticky background effect
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 20) {
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
+            }
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    // Close menu when path changes
+    useEffect(() => {
+        setIsMenuOpen(false);
+    }, [currentPath]);
+
+    const navLinks = [
+        { name: 'Home', path: '/', end: true },
+        { name: 'About', path: '/about' },
+        {
+            name: 'Services',
+            type: 'dropdown',
+            active: isService,
+            items: [
+                { name: 'Product Photography', path: '/services/product-photography' },
+                { name: 'Seamless White Background', path: '/services/white-background' },
+                { name: 'Hero Shots', path: '/services/hero-shots' },
+                { name: 'Lifestyle Photography', path: '/services/lifestyle-photography' },
+                { name: '3D Product Renders', path: '/services/3d-renders' },
+                { name: 'Infographic Design', path: '/services/infographic-design' },
+                { name: 'Hand Modeling', path: '/services/hand-modeling' },
+                { name: 'Ghost Mannequin', path: '/services/ghost-mannequin' },
+            ]
+        },
+        {
+            name: 'Market Place',
+            type: 'dropdown',
+            active: isIndustry,
+            items: [
+                {
+                    name: 'Amazon',
+                    path: '/services/amazon-photography',
+                    subItems: [
+                        { name: 'Amazon Product Photography', path: '/services/amazon-photography' },
+                        { name: 'Amazon Footwear Photography', path: '/services/amazon-photography' },
+                        { name: 'Amazon Fashion Photography', path: '/services/amazon-photography' },
+                        { name: 'Amazon Medical Product Photography', path: '/services/amazon-photography' },
+                        { name: 'Amazon Electronics Photography', path: '/services/amazon-photography' },
+                        { name: 'Amazon Grocery Product Photography', path: '/services/amazon-photography' },
+                        { name: 'Amazon Furniture Photography', path: '/services/amazon-photography' },
+                        { name: 'Amazon Automotive Product Photography', path: '/services/amazon-photography' },
+                        { name: 'Amazon Bikini Photography', path: '/services/amazon-photography' },
+                    ]
+                },
+                { name: 'Flipkart', path: '/market-place/Flipkart' },
+                { name: 'Myntra', path: '/market-place/Myntra' },
+                { name: 'Meesho', path: '/market-place/Meesho' },
+                { name: 'Ajio', path: '/market-place/Ajio' },
+                { name: 'Tata cliq', path: '/market-place/Tata cliq' },
+                { name: 'Etsy', path: '/market-place/Etsy' },
+            ]
+        },
+        {
+            name: 'Gender',
+            type: 'dropdown',
+            items: [
+                { name: 'Men', path: '/gender/men' },
+                { name: 'Women', path: '/gender/women' },
+                { name: 'Kids', path: '/gender/kids' },
+            ]
+        },
+        { name: 'Blogs', path: '/blogs' },
+    ];
+
     return (
-        <nav className="pill-nav">
-            <Link to="/" className="pill-link brand-pill">PRODSHOOT</Link>
-
-            <NavLink
-                to="/"
-                end
-                className={({ isActive }) => isActive ? "pill-link active" : "pill-link"}
-            >
-                Home
-            </NavLink>
-
-            <div className="nav-item">
-                <div className={`pill-link ${isService ? 'active' : ''}`} style={{ cursor: 'pointer' }}>
-                    Services <ChevronDown size={11} />
+        <nav className={`main-navbar ${isScrolled ? 'scrolled' : ''}`}>
+            <div className="nav-container">
+                {/* 1. Left Section - Logo */}
+                <div className="nav-left">
+                    <Link to="/" className="nav-logo">
+                        <span className="logo-text">PRODSHOOT</span>
+                    </Link>
                 </div>
-                <div className="dropdown-menu">
-                    <NavLink to="/services/product-photography" className="dropdown-item">Product Photography</NavLink>
-                    <NavLink to="/services/white-background" className="dropdown-item">Seamless White Background</NavLink>
-                    <NavLink to="/services/hero-shots" className="dropdown-item">Hero Shots</NavLink>
-                    <NavLink to="/services/lifestyle-photography" className="dropdown-item">Lifestyle Photography</NavLink>
-                    <NavLink to="/services/3d-renders" className="dropdown-item">3D Product Renders</NavLink>
-                    <NavLink to="/services/infographic-design" className="dropdown-item">Infographic Design</NavLink>
-                    <NavLink to="/services/hand-modeling" className="dropdown-item">Hand Modeling</NavLink>
-                    <NavLink to="/services/ghost-mannequin" className="dropdown-item">Ghost Mannequin</NavLink>
+
+                {/* 2. Center Section - Links */}
+                <div className={`nav-center ${isMenuOpen ? 'mobile-open' : ''}`}>
+                    {navLinks.map((link, index) => (
+                        link.type === 'dropdown' ? (
+                            <div className="nav-item dropdown" key={index}>
+                                <div className={`nav-link ${link.active ? 'active' : ''}`}>
+                                    {link.name} <ChevronDown size={12} className="dropdown-arrow" />
+                                </div>
+                                <div className="dropdown-menu">
+                                    {link.items.map((item, idx) => (
+                                        <div key={idx} className="dropdown-group">
+                                            <NavLink to={item.path} className="dropdown-item">
+                                                {item.name}
+                                                {item.subItems && <ChevronDown size={10} style={{ marginLeft: 'auto', opacity: 0.5 }} />}
+                                            </NavLink>
+                                            {item.subItems && (
+                                                <div className="sub-menu">
+                                                    {item.subItems.map((sub, sIdx) => (
+                                                        <NavLink key={sIdx} to={sub.path} className="sub-item">
+                                                            {sub.name}
+                                                        </NavLink>
+                                                    ))}
+                                                </div>
+                                            )}
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        ) : (
+                            <NavLink
+                                key={index}
+                                to={link.path}
+                                end={link.end}
+                                className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
+                            >
+                                {link.name}
+                            </NavLink>
+                        )
+                    ))}
+
+                    {/* Mobile only buttons in the menu */}
+                    <div className="mobile-only-actions">
+                        <a href="/#contact" className="nav-btn primary-btn">Get a Quote</a>
+                        <Link to="/contact" className="nav-btn secondary-btn">Contact</Link>
+                    </div>
+                </div>
+
+                {/* 3. Right Section - CTAs */}
+                <div className="nav-right">
+                    <a href="/#contact" className="nav-btn primary-btn quote-btn">
+                        <span>Get a Quote</span>
+                        <ArrowUpRight size={14} className="btn-icon" />
+                    </a>
+                    <Link to="/contact" className="nav-btn secondary-btn hide-mobile">
+                        Contact
+                    </Link>
+
+                    {/* Hamburger Toggle */}
+                    <button
+                        className="mobile-toggle"
+                        onClick={() => setIsMenuOpen(!isMenuOpen)}
+                        aria-label="Toggle menu"
+                    >
+                        {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                    </button>
                 </div>
             </div>
 
-            <div className="nav-item">
-                <div className={`pill-link ${isIndustry ? 'active' : ''}`} style={{ cursor: 'pointer' }}>
-                    Market Place <ChevronDown size={11} />
-                </div>
-                <div className="dropdown-menu">
-                    <NavLink to="/market-place/Amazon" className="dropdown-item">Amazon</NavLink>
-                    <NavLink to="/market-place/Flipkart" className="dropdown-item">Flipkart</NavLink>
-                    <NavLink to="/market-place/Myntra" className="dropdown-item">Myntra</NavLink>
-                    <NavLink to="/market-place/Meesho" className="dropdown-item">Meesho</NavLink>
-                    <NavLink to="/market-place/Ajio" className="dropdown-item">Ajio</NavLink>
-                    <NavLink to="/market-place/Tata cliq" className="dropdown-item">Tata cliq</NavLink>
-                    <NavLink to="/market-place/Etsy" className="dropdown-item">Etsy</NavLink>
-                </div>
-            </div>
-
-            <NavLink
-                to="/portfolio"
-                className={({ isActive }) => isActive ? "pill-link active" : "pill-link"}
-            >
-                Portfolio
-            </NavLink>
-            <NavLink
-                to="/about"
-                className={({ isActive }) => isActive ? "pill-link active" : "pill-link"}
-            >
-                About
-            </NavLink>
-            <NavLink
-                to="/contact"
-                className={({ isActive }) => isActive ? "pill-link active" : "pill-link"}
-                style={{ border: '1px solid rgba(168, 85, 247, 0.4)' }}
-            >
-                Contact
-            </NavLink>
+            {/* Mobile Overlay */}
+            {isMenuOpen && <div className="nav-overlay" onClick={() => setIsMenuOpen(false)}></div>}
         </nav>
     );
 }
 
 export default Navbar;
+
