@@ -29,6 +29,7 @@ import AjioPhotography from './pages/AjioPhotography.jsx'
 import AjioFootwear from './pages/AjioFootwear.jsx'
 import AjioFashion from './pages/AjioFashion.jsx'
 import AjioBikini from './pages/AjioBikini.jsx'
+import Blog from './pages/Blog.jsx'
 import ProductPhotography from './pages/ProductPhotography.jsx'
 import WhiteBackground from './pages/WhiteBackground.jsx'
 import HeroShots from './pages/HeroShots.jsx'
@@ -97,6 +98,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/market-place/ajio-footwear" element={<AjioFootwear />} />
         <Route path="/market-place/ajio-fashion" element={<AjioFashion />} />
         <Route path="/market-place/ajio-bikini" element={<AjioBikini />} />
+        <Route path="/services/amazon-photography" element={<AmazonPhotography />} />
         <Route path="/services/white-background" element={<WhiteBackground />} />
         <Route path="/services/hero-shots" element={<HeroShots />} />
         <Route path="/services/lifestyle-photography" element={<LifestylePhotography />} />
@@ -128,6 +130,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/market-place/etsy/freelancer-photography" element={<EtsyFreelancerPhotography />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/about" element={<About />} />
+        <Route path="/blogs" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </BrowserRouter>
