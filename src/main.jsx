@@ -51,6 +51,14 @@ import TatacliqFurniturePhotography from './pages/TatacliqFurniturePhotography.j
 import TatacliqCosmeticPhotography from './pages/TatacliqCosmeticPhotography.jsx'
 import TatacliqMedicalPhotography from './pages/TatacliqMedicalPhotography.jsx'
 import TatacliqElectronicsPhotography from './pages/TatacliqElectronicsPhotography.jsx'
+import EtsyFootwearPhotography from './pages/EtsyFootwearPhotography.jsx'
+import EtsyFashionPhotography from './pages/EtsyFashionPhotography.jsx'
+import EtsyBikiniPhotography from './pages/EtsyBikiniPhotography.jsx'
+import EtsyElectronicsPhotography from './pages/EtsyElectronicsPhotography.jsx'
+import EtsyFurniturePhotography from './pages/EtsyFurniturePhotography.jsx'
+import EtsyHandicraftPhotography from './pages/EtsyHandicraftPhotography.jsx'
+import EtsyEcommercePhotography from './pages/EtsyEcommercePhotography.jsx'
+import EtsyFreelancerPhotography from './pages/EtsyFreelancerPhotography.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -77,14 +85,10 @@ createRoot(document.getElementById('root')).render(
         <Route path="/market-place/flipkart-furniture" element={<FlipkartFurniture />} />
         <Route path="/market-place/flipkart-automotive" element={<FlipkartAutomotive />} />
         <Route path="/market-place/flipkart-bikini" element={<FlipkartBikini />} />
-<<<<<<< Updated upstream
         <Route path="/market-place/Myntra" element={<MyntraPhotography />} />
         <Route path="/market-place/myntra-footwear" element={<MyntraFootwear />} />
         <Route path="/market-place/myntra-fashion-model" element={<MyntraFashionModel />} />
         <Route path="/market-place/myntra-bikini" element={<MyntraBikini />} />
-=======
-        <Route path="/services/amazon-photography" element={<AmazonPhotography />} />
->>>>>>> Stashed changes
         <Route path="/services/white-background" element={<WhiteBackground />} />
         <Route path="/services/hero-shots" element={<HeroShots />} />
         <Route path="/services/lifestyle-photography" element={<LifestylePhotography />} />
@@ -106,6 +110,14 @@ createRoot(document.getElementById('root')).render(
         <Route path="/market-place/tatacliq/cosmetic-photography" element={<TatacliqCosmeticPhotography />} />
         <Route path="/market-place/tatacliq/medical-photography" element={<TatacliqMedicalPhotography />} />
         <Route path="/market-place/tatacliq/electronics-photography" element={<TatacliqElectronicsPhotography />} />
+        <Route path="/market-place/etsy/footwear-photography" element={<EtsyFootwearPhotography />} />
+        <Route path="/market-place/etsy/fashion-photography" element={<EtsyFashionPhotography />} />
+        <Route path="/market-place/etsy/bikini-photography" element={<EtsyBikiniPhotography />} />
+        <Route path="/market-place/etsy/electronics-photography" element={<EtsyElectronicsPhotography />} />
+        <Route path="/market-place/etsy/furniture-photography" element={<EtsyFurniturePhotography />} />
+        <Route path="/market-place/etsy/handicraft-photography" element={<EtsyHandicraftPhotography />} />
+        <Route path="/market-place/etsy/ecommerce-photography" element={<EtsyEcommercePhotography />} />
+        <Route path="/market-place/etsy/freelancer-photography" element={<EtsyFreelancerPhotography />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
