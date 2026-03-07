@@ -483,14 +483,16 @@ function App() {
                 GET STARTED
               </motion.div>
             </Link>
-            <motion.a
-              href="tel:+919356917424"
-              whileHover={{ scale: 1.03 }}
+            <a
+              href={/iPhone|iPad|iPod|Android/i.test(navigator.userAgent) ? "tel:+919356917424" : "https://wa.me/919356917424"}
               className="cta-secondary-btn"
+              style={{ cursor: 'pointer' }}
+              target={/iPhone|iPad|iPod|Android/i.test(navigator.userAgent) ? "_self" : "_blank"}
+              rel="noopener noreferrer"
             >
               <Phone size={16} />
-              CALL US
-            </motion.a>
+              {/iPhone|iPad|iPod|Android/i.test(navigator.userAgent) ? "CALL US" : "CALL / WHATSAPP"}
+            </a>
           </div>
         </motion.div>
       </main>

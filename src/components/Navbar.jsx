@@ -181,7 +181,7 @@ function Navbar() {
                 {/* 1. Left Section - Logo */}
                 <div className="nav-left">
                     <Link to="/" className="nav-logo">
-                        <span className="logo-text">PRODSHOOT</span>
+                        <img src="/logo.png" alt="Prodshoot Logo" className="logo-img" />
                     </Link>
                 </div>
 

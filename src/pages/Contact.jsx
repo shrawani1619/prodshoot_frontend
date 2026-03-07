@@ -16,6 +16,7 @@ import {
 } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import CustomSelect from '../components/CustomSelect';
 
 const fadeUp = {
     initial: { opacity: 0, y: 30 },
@@ -103,7 +104,7 @@ function Contact() {
                                 <div className="contact-icon-box"><Mail size={24} /></div>
                                 <div className="contact-text-box">
                                     <span>Email us</span>
-                                    <h3>sales@damsole.com</h3>
+                                    <h3>sales@prodshoot.co.in</h3>
                                     <p>Official support & inquiries</p>
                                 </div>
                             </motion.div>
@@ -131,7 +132,7 @@ function Contact() {
                             <a href="#" className="social-link-btn"><Instagram size={20} /></a>
                             <a href="#" className="social-link-btn"><Linkedin size={20} /></a>
                             <a href="#" className="social-link-btn"><Twitter size={20} /></a>
-                            <a href="https://aidamsole.com" target="_blank" rel="noopener noreferrer" className="social-link-btn" title="Visit Aidamsole">
+                            <a href="https://prodshoot.co.in" target="_blank" rel="noopener noreferrer" className="social-link-btn" title="Visit Prodshoot">
                                 <Globe size={20} />
                             </a>
                         </div>
@@ -193,14 +194,20 @@ function Contact() {
                                     </div>
                                     <div className="form-group">
                                         <label>Subject</label>
-                                        <select name="subject" value={formData.subject} onChange={handleChange} required>
-                                            <option value="">Select a subject</option>
-                                            <option value="Product Photography">Product Photography</option>
-                                            <option value="3D Renders">3D Renders</option>
-                                            <option value="Bulk Order">Bulk Order</option>
-                                            <option value="Partnership">Partnership</option>
-                                            <option value="General Query">General Query</option>
-                                        </select>
+                                        <CustomSelect
+                                            name="subject"
+                                            value={formData.subject}
+                                            onChange={handleChange}
+                                            required
+                                            placeholder="Select a subject"
+                                            options={[
+                                                { value: 'Product Photography', label: 'Product Photography' },
+                                                { value: '3D Renders', label: '3D Renders' },
+                                                { value: 'Bulk Order', label: 'Bulk Order' },
+                                                { value: 'Partnership', label: 'Partnership' },
+                                                { value: 'General Query', label: 'General Query' },
+                                            ]}
+                                        />
                                     </div>
                                 </div>
 

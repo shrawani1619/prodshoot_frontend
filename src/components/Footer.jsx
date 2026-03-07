@@ -8,13 +8,15 @@ function Footer() {
             <div className="footer-inner">
                 <div className="footer-main">
                     <div className="footer-col footer-brand-col">
-                        <Link to="/" className="footer-brand" style={{ textDecoration: 'none' }}>PRODSHOOT</Link>
+                        <Link to="/" className="footer-brand" style={{ textDecoration: 'none' }}>
+                            <img src="/logo.png" alt="Prodshoot Logo" className="logo-img" />
+                        </Link>
                         <p className="footer-tagline">Professional product photography studio for D2C brands and marketplace sellers worldwide.</p>
                         <div className="footer-socials">
                             <a href="#" className="social-link"><Instagram size={18} /></a>
                             <a href="#" className="social-link"><Twitter size={18} /></a>
                             <a href="#" className="social-link"><Linkedin size={18} /></a>
-                            <a href="mailto:sales@damsole.com" className="social-link"><Mail size={18} /></a>
+                            <a href="mailto:sales@prodshoot.co.in" className="social-link"><Mail size={18} /></a>
                         </div>
                     </div>
 
@@ -46,7 +48,7 @@ function Footer() {
                         <Link to="/about">About Us</Link>
                         <Link to="/portfolio">Portfolio</Link>
                         <Link to="/contact">Contact</Link>
-                        <a href="https://aidamsole.com" target="_blank" rel="noopener noreferrer">Aidamsole</a>
+                        <a href="https://prodshoot.co.in" target="_blank" rel="noopener noreferrer">Prodshoot</a>
                         <a href="#">Blog</a>
                     </div>
 
@@ -54,7 +56,7 @@ function Footer() {
                         <h4>Contact</h4>
                         <div className="footer-contact-item">
                             <Mail size={14} />
-                            <span>sales@damsole.com</span>
+                            <span>sales@prodshoot.co.in</span>
                         </div>
                         <div className="footer-contact-item">
                             <Phone size={14} />
@@ -62,13 +64,13 @@ function Footer() {
                         </div>
                         <div className="footer-contact-item">
                             <MapPin size={14} />
-                            <span>Damsole Technologies No. 103, 104 Madhuban Complex, Manchar 410503</span>
+                            <span>Prodshoot Studio, No. 103, 104 Madhuban Complex, Manchar 410503</span>
                         </div>
                     </div>
                 </div>
 
                 <div className="footer-bottom">
-                    <p>© 2026 Aidamsole — Professional Product Photography Studio. All Rights Reserved.</p>
+                    <p>© 2026 Prodshoot — Professional Product Photography Studio. All Rights Reserved.</p>
                     <div className="footer-bottom-links">
                         <a href="#">Privacy Policy</a>
                         <a href="#">Terms of Service</a>

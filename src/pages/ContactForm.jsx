@@ -12,6 +12,7 @@ import {
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import CustomSelect from '../components/CustomSelect';
 
 const fadeUp = {
     initial: { opacity: 0, y: 20 },
@@ -103,7 +104,7 @@ function ContactForm() {
                                         <CheckCircle2 size={64} />
                                     </div>
                                     <h2>Message Sent!</h2>
-                                    <p>Our team at aidamsole.com will review your inquiry and get back to you within 12 hours. We're excited to learn more about your brand.</p>
+                                    <p>Our team at prodshoot.co.in will review your inquiry and get back to you within 12 hours. We're excited to learn more about your brand.</p>
                                     <button className="cta-secondary-btn" onClick={() => setStatus('idle')}>SEND ANOTHER</button>
                                 </motion.div>
                             ) : (
@@ -143,13 +144,19 @@ function ContactForm() {
                                             />
                                         </div>
                                         <div className="form-group-dedicated">
-                                            <select name="subject" value={formData.subject} onChange={handleChange} required>
-                                                <option value="">Select Service Type</option>
-                                                <option value="Commercial Photography">Commercial Photography</option>
-                                                <option value="3D Product Modeling">3D Product Modeling</option>
-                                                <option value="Packaging Design">Packaging Design</option>
-                                                <option value="Partnership Inquiry">Partnership Inquiry</option>
-                                            </select>
+                                            <CustomSelect
+                                                name="subject"
+                                                value={formData.subject}
+                                                onChange={handleChange}
+                                                required
+                                                placeholder="Select Service Type"
+                                                options={[
+                                                    { value: 'Commercial Photography', label: 'Commercial Photography' },
+                                                    { value: '3D Product Modeling', label: '3D Product Modeling' },
+                                                    { value: 'Packaging Design', label: 'Packaging Design' },
+                                                    { value: 'Partnership Inquiry', label: 'Partnership Inquiry' },
+                                                ]}
+                                            />
                                         </div>
                                     </div>
 
@@ -183,7 +190,7 @@ function ContactForm() {
                                     </div>
 
                                     {status === 'error' && (
-                                        <p className="error-msg-dedicated">Failed to send. Please contact us on sales@damsole.com directly.</p>
+                                        <p className="error-msg-dedicated">Failed to send. Please contact us on sales@prodshoot.co.in directly.</p>
                                     )}
                                 </form>
                             )}
@@ -193,7 +200,7 @@ function ContactForm() {
                     <div className="form-quick-info">
                         <div className="quick-info-item">
                             <Mail size={16} />
-                            <span>sales@damsole.com</span>
+                            <span>sales@prodshoot.co.in</span>
                         </div>
                         <div className="quick-info-item">
                             <Phone size={16} />
@@ -201,7 +208,7 @@ function ContactForm() {
                         </div>
                         <div className="quick-info-item">
                             <Globe size={16} />
-                            <span>aidamsole.com</span>
+                            <span>prodshoot.co.in</span>
                         </div>
                     </div>
                 </div>
