@@ -25,6 +25,7 @@ import MyntraPhotography from './pages/MyntraPhotography.jsx'
 import MyntraFootwear from './pages/MyntraFootwear.jsx'
 import MyntraFashionModel from './pages/MyntraFashionModel.jsx'
 import MyntraBikini from './pages/MyntraBikini.jsx'
+import Blog from './pages/Blog.jsx'
 import ProductPhotography from './pages/ProductPhotography.jsx'
 import WhiteBackground from './pages/WhiteBackground.jsx'
 import HeroShots from './pages/HeroShots.jsx'
@@ -89,6 +90,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/market-place/myntra-footwear" element={<MyntraFootwear />} />
         <Route path="/market-place/myntra-fashion-model" element={<MyntraFashionModel />} />
         <Route path="/market-place/myntra-bikini" element={<MyntraBikini />} />
+        <Route path="/services/amazon-photography" element={<AmazonPhotography />} />
         <Route path="/services/white-background" element={<WhiteBackground />} />
         <Route path="/services/hero-shots" element={<HeroShots />} />
         <Route path="/services/lifestyle-photography" element={<LifestylePhotography />} />
@@ -120,6 +122,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/market-place/etsy/freelancer-photography" element={<EtsyFreelancerPhotography />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/about" element={<About />} />
+        <Route path="/blogs" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </BrowserRouter>
