@@ -16,7 +16,7 @@ function Footer() {
                             <a href="#" className="social-link"><Instagram size={18} /></a>
                             <a href="#" className="social-link"><Twitter size={18} /></a>
                             <a href="#" className="social-link"><Linkedin size={18} /></a>
-                            <a href="mailto:sales@prodshoot.co.in" className="social-link"><Mail size={18} /></a>
+                            <a href="mailto:click@prodshoot.co.in" className="social-link"><Mail size={18} /></a>
                         </div>
                     </div>
 
@@ -56,7 +56,7 @@ function Footer() {
                         <h4>Contact</h4>
                         <div className="footer-contact-item">
                             <Mail size={14} />
-                            <span>sales@prodshoot.co.in</span>
+                            <span>click@prodshoot.co.in</span>
                         </div>
                         <div className="footer-contact-item">
                             <Phone size={14} />

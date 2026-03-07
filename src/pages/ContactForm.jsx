@@ -190,7 +190,7 @@ function ContactForm() {
                                     </div>
 
                                     {status === 'error' && (
-                                        <p className="error-msg-dedicated">Failed to send. Please contact us on sales@prodshoot.co.in directly.</p>
+                                        <p className="error-msg-dedicated">Failed to send. Please contact us on click@prodshoot.co.in directly.</p>
                                     )}
                                 </form>
                             )}
@@ -200,7 +200,7 @@ function ContactForm() {
                     <div className="form-quick-info">
                         <div className="quick-info-item">
                             <Mail size={16} />
-                            <span>sales@prodshoot.co.in</span>
+                            <span>click@prodshoot.co.in</span>
                         </div>
                         <div className="quick-info-item">
                             <Phone size={16} />

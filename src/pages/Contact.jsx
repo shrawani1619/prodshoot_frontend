@@ -104,7 +104,7 @@ function Contact() {
                                 <div className="contact-icon-box"><Mail size={24} /></div>
                                 <div className="contact-text-box">
                                     <span>Email us</span>
-                                    <h3>sales@prodshoot.co.in</h3>
+                                    <h3>click@prodshoot.co.in</h3>
                                     <p>Official support & inquiries</p>
                                 </div>
                             </motion.div>
