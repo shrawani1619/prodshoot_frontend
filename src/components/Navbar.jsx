@@ -89,9 +89,9 @@ function Navbar() {
                     path: '/market-place/Myntra',
                     subItems: [
                         { name: 'Myntra Product Photography', path: '/market-place/Myntra' },
-                        { name: 'Myntra Footwear Photography', path: '/market-place/Myntra' },
-                        { name: 'Myntra Fashion & Model Photography', path: '/market-place/Myntra' },
-                        { name: 'Myntra Bikini Photoshoot', path: '/market-place/Myntra' },
+                        { name: 'Myntra Footwear Photography', path: '/market-place/myntra-footwear' },
+                        { name: 'Myntra Fashion & Model Photography', path: '/market-place/myntra-fashion-model' },
+                        { name: 'Myntra Bikini Photoshoot', path: '/market-place/myntra-bikini' },
                     ]
                 },
                 {
