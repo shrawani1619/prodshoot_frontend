@@ -113,9 +113,9 @@ function Navbar() {
                     path: '/market-place/Ajio',
                     subItems: [
                         { name: 'Ajio Product Photography', path: '/market-place/Ajio' },
-                        { name: 'Ajio Footwear Photography', path: '/market-place/Ajio' },
-                        { name: 'Ajio Fashion Photography', path: '/market-place/Ajio' },
-                        { name: 'Ajio Bikini Photography', path: '/market-place/Ajio' },
+                        { name: 'Ajio Footwear Photography', path: '/market-place/ajio-footwear' },
+                        { name: 'Ajio Fashion Photography', path: '/market-place/ajio-fashion' },
+                        { name: 'Ajio Bikini Photography', path: '/market-place/ajio-bikini' },
                     ]
                 },
                 {
