@@ -4,7 +4,9 @@ import { ChevronDown, Menu, X, ArrowUpRight } from 'lucide-react';
 
 function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [activeDropdown, setActiveDropdown] = useState(null);
     const [isScrolled, setIsScrolled] = useState(false);
+    const timeoutRef = React.useRef(null);
     const location = useLocation();
     const currentPath = location.pathname;
 
@@ -29,7 +31,19 @@ function Navbar() {
     // Close menu when path changes
     useEffect(() => {
         setIsMenuOpen(false);
+        setActiveDropdown(null);
     }, [currentPath]);
+
+    const handleMouseEnter = (name) => {
+        if (timeoutRef.current) clearTimeout(timeoutRef.current);
+        setActiveDropdown(name);
+    };
+
+    const handleMouseLeave = () => {
+        timeoutRef.current = setTimeout(() => {
+            setActiveDropdown(null);
+        }, 300); // 300ms delay before closing
+    };
 
     const navLinks = [
         { name: 'Home', path: '/', end: true },
@@ -99,13 +113,13 @@ function Navbar() {
                     path: '/market-place/Meesho',
                     subItems: [
                         { name: 'Meesho Product Photography', path: '/market-place/Meesho' },
-                        { name: 'Meesho Footwear Photography', path: '/market-place/Meesho' },
-                        { name: 'Meesho Fashion Photography', path: '/market-place/Meesho' },
-                        { name: 'Meesho E-Commerce Photography', path: '/market-place/Meesho' },
-                        { name: 'Meesho Electronics Photography', path: '/market-place/Meesho' },
-                        { name: 'Meesho Furniture Photography', path: '/market-place/Meesho' },
-                        { name: 'Meesho Automotive Photography', path: '/market-place/Meesho' },
-                        { name: 'Meesho Bikini Photography', path: '/market-place/Meesho' },
+                        { name: 'Meesho Footwear Photography', path: '/market-place/meesho-footwear' },
+                        { name: 'Meesho Fashion Photography', path: '/market-place/meesho-fashion' },
+                        { name: 'Meesho E-Commerce Photography', path: '/market-place/meesho-ecommerce' },
+                        { name: 'Meesho Electronics Photography', path: '/market-place/meesho-electronics' },
+                        { name: 'Meesho Furniture Photography', path: '/market-place/meesho-furniture' },
+                        { name: 'Meesho Automotive Photography', path: '/market-place/meesho-automotive' },
+                        { name: 'Meesho Bikini Photography', path: '/market-place/meesho-bikini' },
                     ]
                 },
                 {
@@ -175,21 +189,35 @@ function Navbar() {
                 <div className={`nav-center ${isMenuOpen ? 'mobile-open' : ''}`}>
                     {navLinks.map((link, index) => (
                         link.type === 'dropdown' ? (
-                            <div className={`nav-item dropdown${link.name === 'Services' ? ' services-dropdown' : ''}`} key={index}>
-                                <div className={`nav-link ${link.active ? 'active' : ''}`}>
+                            <div
+                                className={`nav-item dropdown${link.name === 'Services' ? ' services-dropdown' : ''} ${activeDropdown === link.name ? 'is-active' : ''}`}
+                                key={index}
+                                onMouseEnter={() => handleMouseEnter(link.name)}
+                                onMouseLeave={handleMouseLeave}
+                            >
+                                <div className={`nav-link ${link.active || activeDropdown === link.name ? 'active' : ''}`}>
                                     {link.name} <ChevronDown size={12} className="dropdown-arrow" />
                                 </div>
-                                <div className="dropdown-menu">
+                                <div className={`dropdown-menu ${activeDropdown === link.name ? 'show' : ''}`}>
                                     {link.items.map((item, idx) => (
                                         <div key={idx} className="dropdown-group">
-                                            <NavLink to={item.path} className="dropdown-item">
+                                            <NavLink
+                                                to={item.path}
+                                                className="dropdown-item"
+                                                onClick={() => setActiveDropdown(null)}
+                                            >
                                                 {item.name}
-                                                {item.subItems && <ChevronDown size={10} style={{ marginLeft: 'auto', opacity: 0.5 }} />}
+                                                {item.subItems && <ChevronDown size={10} style={{ marginLeft: 'auto', opacity: 0.5, transform: 'rotate(-90deg)' }} />}
                                             </NavLink>
                                             {item.subItems && (
                                                 <div className="sub-menu">
                                                     {item.subItems.map((sub, sIdx) => (
-                                                        <NavLink key={sIdx} to={sub.path} className="sub-item">
+                                                        <NavLink
+                                                            key={sIdx}
+                                                            to={sub.path}
+                                                            className="sub-item"
+                                                            onClick={() => setActiveDropdown(null)}
+                                                        >
                                                             {sub.name}
                                                         </NavLink>
                                                     ))}
@@ -205,6 +233,7 @@ function Navbar() {
                                 to={link.path}
                                 end={link.end}
                                 className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
+                                onClick={() => setActiveDropdown(null)}
                             >
                                 {link.name}
                             </NavLink>

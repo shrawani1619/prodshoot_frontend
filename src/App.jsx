@@ -221,7 +221,7 @@ function App() {
             SECTION 2: TRUST BAR
         ═══════════════════════════════════════════ */}
         <div className="trust-bar">
-          {['Trusted by 500+ Brands', 'Amazon Compliant', '48-Hour Delivery', 'Free Re-shoots', 'Secure Shipping'].map((item, i) => (
+          {['Marketplace-ready images', 'Pan-India service', '500+ brands scaled', '100% Satisfaction Guarantee', 'Expert Product Image Editing', 'Fast Turnaround Time'].map((item, i) => (
             <div className="trust-item" key={i}>
               <span className="trust-dot" />
               {item}

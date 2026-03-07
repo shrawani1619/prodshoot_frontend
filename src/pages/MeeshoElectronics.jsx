@@ -13,12 +13,7 @@ import {
     Star,
     ArrowRight,
     Send,
-    Phone,
-    Eye,
-    Palette,
-    Target,
-    Maximize2,
-    Droplets
+    Phone
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
@@ -34,67 +29,7 @@ const stagger = {
     animate: { transition: { staggerChildren: 0.1 } }
 };
 
-function WhiteBackground() {
-    const features = [
-        "Pure RGB 255,255,255 white background",
-        "Multiple angles — front, back, sides, 45°, detail close-ups",
-        "Color-accurate calibrated lighting",
-        "Ghost mannequin / invisible model for apparel",
-        "Natural & consistent soft shadow options",
-        "Precision clipping paths included",
-        "High-res output (up to 4000x4000px)",
-        "Batch consistency across 100s of SKUs"
-    ];
-
-    const useCases = [
-        {
-            icon: <Target size={22} />,
-            title: "E-commerce Stores",
-            desc: "Clean product listings for Shopify, WooCommerce, and custom stores that increase buyer confidence."
-        },
-        {
-            icon: <Eye size={22} />,
-            title: "Marketplace Listings",
-            desc: "Amazon, Flipkart, Meesho — white backgrounds are mandatory for marketplace compliance."
-        },
-        {
-            icon: <Palette size={22} />,
-            title: "Catalogs & Lookbooks",
-            desc: "Uniform backgrounds for digital and print catalogs that give your brand a premium, cohesive feel."
-        },
-        {
-            icon: <Maximize2 size={22} />,
-            title: "Social Media Ads",
-            desc: "Isolated product images that are easy to composite into banners, carousels, and sponsored ads."
-        },
-        {
-            icon: <Layers size={22} />,
-            title: "Wholesale & B2B",
-            desc: "Professional product sheets for buyers, distributors, and retail partners."
-        },
-        {
-            icon: <Droplets size={22} />,
-            title: "Brand Guidelines",
-            desc: "Consistent product imagery that aligns with brand standards and asset libraries."
-        }
-    ];
-
-
-    const process = [
-        { step: "01", title: "Send Your Products", desc: "Ship your products to our studio with our pre-paid labels, or bring them in person. We handle everything from here.", icon: <Package size={24} /> },
-        { step: "02", title: "Styled & Lit", desc: "Our stylists position each product precisely. We use calibrated daylight-balanced lighting for true-to-life colors.", icon: <Camera size={24} /> },
-        { step: "03", title: "Shot on White", desc: "Each product is photographed from multiple angles on our infinity-curve seamless backdrop for that perfect float look.", icon: <Image size={24} /> },
-        { step: "04", title: "Retouched to Perfection", desc: "Backgrounds are cleaned to pure white, colors corrected, blemishes removed, and images cropped to your specifications.", icon: <Layers size={24} /> },
-        { step: "05", title: "Delivered Ready", desc: "Final files delivered in your preferred format, resolution, and aspect ratio — ready to upload to any platform.", icon: <Zap size={24} /> },
-    ];
-
-    const stats = [
-        { number: "1M+", label: "White BG Images Delivered" },
-        { number: "100%", label: "Pure White Guarantee" },
-        { number: "500+", label: "Brands Trust Us" },
-        { number: "48H", label: "Standard Delivery" },
-    ];
-
+function MeeshoElectronics() {
     return (
         <div className="page-wrapper">
             <Navbar />
@@ -109,15 +44,15 @@ function WhiteBackground() {
                     >
                         <motion.div className="hero-badge" variants={fadeUp}>
                             <Camera size={10} style={{ display: 'inline', marginRight: '6px', verticalAlign: 'middle' }} />
-                            WHITE BACKGROUND PHOTOGRAPHY
+                            ELECTRONICS PHOTOGRAPHY FOR MEESHO
                         </motion.div>
 
                         <motion.h1 className="service-hero-title display-bold" variants={fadeUp}>
-                            Seamless White<br />Background<br />Photography
+                            Crisp, High-Detail<br />Electronics Visuals for<br />Meesho
                         </motion.h1>
 
                         <motion.p className="service-hero-desc" variants={fadeUp}>
-                            Pixel-perfect white background product images that make your products pop. Every image is shot, retouched, and delivered to meet the strictest marketplace and e-commerce standards.
+                            From gadget textures to interface clarity, we specialize in high-precision electronics photography. We highlight the build quality and features of your tech products for the Meesho marketplace.
                         </motion.p>
 
                         <motion.div className="service-hero-actions" variants={fadeUp}>
@@ -144,38 +79,28 @@ function WhiteBackground() {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: 0.3 }}
                 >
-                    <img src="/portfolio-sneakers.png" alt="White background product photography" />
+                    <img src="/portfolio-watch.png" alt="Meesho electronics photography" />
                 </motion.div>
-            </section>
-
-            {/* ─── STATS BAR ─── */}
-            <section className="service-stats-bar">
-                {stats.map((stat, idx) => (
-                    <motion.div
-                        key={idx}
-                        className="service-stat"
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: idx * 0.1 }}
-                    >
-                        <span className="service-stat-number">{stat.number}</span>
-                        <span className="service-stat-label">{stat.label}</span>
-                    </motion.div>
-                ))}
             </section>
 
             {/* ─── WHAT YOU GET ─── */}
             <section className="service-section">
                 <div className="service-section-grid">
                     <div className="service-section-text">
-                        <span className="section-label-sm">PIXEL PERFECT</span>
-                        <h2 className="service-section-title display-bold">Pure White. Zero Compromise.</h2>
+                        <span className="section-label-sm">TECH SPECIALISTS</span>
+                        <h2 className="service-section-title display-bold">Precision Lighting for Tech</h2>
                         <p className="service-section-desc">
-                            A true white background isn't just "close to white" — it's RGB 255,255,255 on every pixel. We use calibrated lighting, precision retouching, and quality checks to guarantee backgrounds that pass any compliance test.
+                            Electronics often feature reflective surfaces and complex textures. We use soft-box lighting and polarizers to eliminate unwanted glare while ensuring every functional detail is visible to your customers on Meesho.
                         </p>
                         <ul className="feature-checklist">
-                            {features.map((f, i) => (
+                            {[
+                                "Glare-free reflective surfaces",
+                                "Micro-detail macro shots",
+                                "Port and interface clarity",
+                                "Accurate color for plastics/metals",
+                                "Clean white background isolation",
+                                "High-resolution for technical zoom"
+                            ].map((f, i) => (
                                 <motion.li
                                     key={i}
                                     initial={{ opacity: 0, x: -10 }}
@@ -189,53 +114,25 @@ function WhiteBackground() {
                             ))}
                         </ul>
                     </div>
-                    <motion.div
-                        className="service-section-image"
-                        initial={{ opacity: 0, scale: 0.95 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6 }}
-                    >
-                        <img src="/amazon-examples.png" alt="White background product examples" />
-                    </motion.div>
                 </div>
             </section>
 
-            {/* ─── USE CASES ─── */}
-            <section className="service-section">
-                <div className="section-heading" style={{ maxWidth: '1440px', margin: '0 auto', padding: '0 2rem' }}>
-                    <h2>Use Cases</h2>
-                    <p>Where White Backgrounds Shine</p>
-                </div>
-
-                <div className="why-grid" style={{ maxWidth: '1440px', margin: '2rem auto 0', padding: '0 2rem' }}>
-                    {useCases.map((item, idx) => (
-                        <motion.div
-                            key={idx}
-                            className="why-card"
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: idx * 0.08 }}
-                            whileHover={{ y: -4, borderColor: 'rgba(168, 85, 247, 0.3)' }}
-                        >
-                            <div className="why-icon">{item.icon}</div>
-                            <h3>{item.title}</h3>
-                            <p>{item.desc}</p>
-                        </motion.div>
-                    ))}
-                </div>
-            </section>
-
+            
             {/* ─── PROCESS ─── */}
             <section className="service-section">
                 <div className="section-heading" style={{ maxWidth: '1440px', margin: '0 auto', padding: '0 2rem' }}>
                     <h2>Our Process</h2>
-                    <p>From Product To Perfect Image</p>
+                    <p>From Unboxing To Listing</p>
                 </div>
 
                 <div className="process-timeline">
-                    {process.map((step, idx) => (
+                    {[
+                        { step: "01", title: "Ship Your Products", desc: "Pack and ship your products to our studio. We provide pre-paid shipping labels for hassle-free delivery.", icon: <Package size={24} /> },
+                        { step: "02", title: "We Plan the Shoot", desc: "Our team reviews marketplace guidelines and plans the perfect shot list for maximum listing performance.", icon: <Camera size={24} /> },
+                        { step: "03", title: "Professional Shooting", desc: "Products are styled and photographed in our studio with calibrated lighting for perfect backgrounds.", icon: <Image size={24} /> },
+                        { step: "04", title: "Expert Post-Production", desc: "Our retouchers color-correct, remove backgrounds, and optimize every image to exact specifications.", icon: <Layers size={24} /> },
+                        { step: "05", title: "Delivery & Review", desc: "Receive your final images within 24-48 hours. Request unlimited revisions until you're 100% satisfied.", icon: <Zap size={24} /> },
+                    ].map((step, idx) => (
                         <motion.div
                             key={idx}
                             className="process-step"
@@ -264,7 +161,7 @@ function WhiteBackground() {
                     <div className="bottom-cta" style={{ background: 'rgba(168, 85, 247, 0.03)', border: '1px solid rgba(168, 85, 247, 0.1)' }}>
                         <h3 className="display-bold" style={{ fontSize: '2.5rem', marginBottom: '1.5rem', color: 'white' }}>Custom Production for Every Seller</h3>
                         <p style={{ fontSize: '1.1rem', color: 'var(--text-muted)', lineHeight: '1.8', marginBottom: '2.5rem' }}>
-                            We don't believe in one-size-fits-all pricing. Every brand has unique product complexities and visual goals. Whether you have 5 SKUs or 500, we provide a custom production plan that scales with your growth.
+                            We don't believe in one-size-fits-all pricing. Every brand has unique product complexities and listing goals. Whether you have 5 SKUs or 500, we provide a custom production plan that scales with your growth.
                         </p>
                         <Link to="/contact" style={{ display: 'inline-block' }}>
                             <motion.div
@@ -280,11 +177,11 @@ function WhiteBackground() {
                 </div>
             </section>
 
-            {/* ─── SAMPLE GALLERY ─── */}
+            {/* ─── EXAMPLE GALLERY ─── */}
             <section className="service-section">
                 <div className="section-heading" style={{ maxWidth: '1440px', margin: '0 auto', padding: '0 2rem' }}>
                     <h2>Sample Work</h2>
-                    <p>White Background Photography</p>
+                    <p>Listings We've Shot</p>
                 </div>
 
                 <div className="sample-gallery">
@@ -298,7 +195,7 @@ function WhiteBackground() {
                             transition={{ delay: idx * 0.1 }}
                             whileHover={{ y: -4 }}
                         >
-                            <img src={src} alt={`White background product sample ${idx + 1}`} />
+                            <img src={src} alt={`Product sample ${idx + 1}`} />
                         </motion.div>
                     ))}
                 </div>
@@ -307,15 +204,15 @@ function WhiteBackground() {
             {/* ─── WHY US ─── */}
             <section className="service-section">
                 <div className="section-heading" style={{ maxWidth: '1440px', margin: '0 auto', padding: '0 2rem' }}>
-                    <h2>Why Prodshoot</h2>
-                    <p>White Background Specialists</p>
+                    <h2>Why Us</h2>
+                    <p>Photography Experts</p>
                 </div>
 
                 <div className="why-grid" style={{ maxWidth: '1440px', margin: '0 auto', padding: '0 2rem' }}>
                     {[
-                        { icon: <Shield size={24} />, title: "100% White Guarantee", desc: "Every image passes our RGB 255,255,255 quality check. If it's not pure white, we reshoot — free." },
-                        { icon: <Clock size={24} />, title: "Batch Consistency", desc: "Whether it's 10 products or 1,000 — every image has the same lighting, shadows, and white balance." },
-                        { icon: <Star size={24} />, title: "Platform Ready", desc: "Images formatted and sized for Amazon, Flipkart, Shopify, Myntra, Nykaa, and every major platform." },
+                        { icon: <Shield size={24} />, title: "Marketplace Compliant", desc: "Our images pass compliance checks on the first try, every time. No listing suppressions." },
+                        { icon: <Clock size={24} />, title: "Fast Turnaround", desc: "Need images fast? We offer priority delivery for time-sensitive launches." },
+                        { icon: <Star size={24} />, title: "Conversion Focused", desc: "We don't just meet guidelines — we craft images designed to maximize click-through and conversion rates." },
                     ].map((item, idx) => (
                         <motion.div
                             key={idx}
@@ -344,10 +241,10 @@ function WhiteBackground() {
                         <div className="bottom-cta-glow" />
                         <div className="bottom-cta-content">
                             <h2 className="display-bold">
-                                Need clean white<br />background images?
+                                Ready to dominate<br />your listings?
                             </h2>
                             <p>
-                                Ship us your products. We'll deliver pixel-perfect white background images ready for any platform — in 48 hours or less.
+                                Ship us your products. We'll deliver high-converting imagery that passes every guideline.
                             </p>
                         </div>
                         <div className="bottom-cta-actions">
@@ -379,4 +276,4 @@ function WhiteBackground() {
     );
 }
 
-export default WhiteBackground;
+export default MeeshoElectronics;

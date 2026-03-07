@@ -29,6 +29,14 @@ import AjioPhotography from './pages/AjioPhotography.jsx'
 import AjioFootwear from './pages/AjioFootwear.jsx'
 import AjioFashion from './pages/AjioFashion.jsx'
 import AjioBikini from './pages/AjioBikini.jsx'
+import MeeshoPhotography from './pages/MeeshoPhotography.jsx'
+import MeeshoFootwear from './pages/MeeshoFootwear.jsx'
+import MeeshoFashion from './pages/MeeshoFashion.jsx'
+import MeeshoEcommerce from './pages/MeeshoEcommerce.jsx'
+import MeeshoElectronics from './pages/MeeshoElectronics.jsx'
+import MeeshoFurniture from './pages/MeeshoFurniture.jsx'
+import MeeshoAutomotive from './pages/MeeshoAutomotive.jsx'
+import MeeshoBikini from './pages/MeeshoBikini.jsx'
 import Blog from './pages/Blog.jsx'
 import ProductPhotography from './pages/ProductPhotography.jsx'
 import WhiteBackground from './pages/WhiteBackground.jsx'
@@ -101,6 +109,14 @@ createRoot(document.getElementById('root')).render(
         <Route path="/market-place/ajio-footwear" element={<AjioFootwear />} />
         <Route path="/market-place/ajio-fashion" element={<AjioFashion />} />
         <Route path="/market-place/ajio-bikini" element={<AjioBikini />} />
+        <Route path="/market-place/Meesho" element={<MeeshoPhotography />} />
+        <Route path="/market-place/meesho-footwear" element={<MeeshoFootwear />} />
+        <Route path="/market-place/meesho-fashion" element={<MeeshoFashion />} />
+        <Route path="/market-place/meesho-ecommerce" element={<MeeshoEcommerce />} />
+        <Route path="/market-place/meesho-electronics" element={<MeeshoElectronics />} />
+        <Route path="/market-place/meesho-furniture" element={<MeeshoFurniture />} />
+        <Route path="/market-place/meesho-automotive" element={<MeeshoAutomotive />} />
+        <Route path="/market-place/meesho-bikini" element={<MeeshoBikini />} />
         <Route path="/services/amazon-photography" element={<AmazonPhotography />} />
         <Route path="/services/white-background" element={<WhiteBackground />} />
         <Route path="/services/hero-shots" element={<HeroShots />} />
