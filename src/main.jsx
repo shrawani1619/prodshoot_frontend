@@ -64,6 +64,9 @@ import EtsyFurniturePhotography from './pages/EtsyFurniturePhotography.jsx'
 import EtsyHandicraftPhotography from './pages/EtsyHandicraftPhotography.jsx'
 import EtsyEcommercePhotography from './pages/EtsyEcommercePhotography.jsx'
 import EtsyFreelancerPhotography from './pages/EtsyFreelancerPhotography.jsx'
+import Men from './pages/Men.jsx'
+import Women from './pages/Women.jsx'
+import Kids from './pages/Kids.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -128,6 +131,9 @@ createRoot(document.getElementById('root')).render(
         <Route path="/market-place/etsy/handicraft-photography" element={<EtsyHandicraftPhotography />} />
         <Route path="/market-place/etsy/ecommerce-photography" element={<EtsyEcommercePhotography />} />
         <Route path="/market-place/etsy/freelancer-photography" element={<EtsyFreelancerPhotography />} />
+        <Route path="/gender/men" element={<Men />} />
+        <Route path="/gender/women" element={<Women />} />
+        <Route path="/gender/kids" element={<Kids />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/about" element={<About />} />
         <Route path="/blogs" element={<Blog />} />
