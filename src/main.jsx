@@ -4,6 +4,14 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './index.css'
 import App from './App.jsx'
 import AmazonPhotography from './pages/AmazonPhotography.jsx'
+import AmazonFootwearPhotography from './pages/AmazonFootwearPhotography.jsx'
+import AmazonFashionPhotography from './pages/AmazonFashionPhotography.jsx'
+import AmazonMedicalPhotography from './pages/AmazonMedicalPhotography.jsx'
+import AmazonElectronicsPhotography from './pages/AmazonElectronicsPhotography.jsx'
+import AmazonGroceryPhotography from './pages/AmazonGroceryPhotography.jsx'
+import AmazonFurniturePhotography from './pages/AmazonFurniturePhotography.jsx'
+import AmazonAutomotivePhotography from './pages/AmazonAutomotivePhotography.jsx'
+import AmazonBikiniPhotography from './pages/AmazonBikiniPhotography.jsx'
 import FlipkartPhotography from './pages/FlipkartPhotography.jsx'
 import FlipkartFootwear from './pages/FlipkartFootwear.jsx'
 import FlipkartFashion from './pages/FlipkartFashion.jsx'
@@ -51,7 +59,15 @@ createRoot(document.getElementById('root')).render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/services/product-photography" element={<ProductPhotography />} />
-        <Route path="/services/amazon-photography" element={<AmazonPhotography />} />
+        <Route path="/market-place/amazon-photography" element={<AmazonPhotography />} />
+        <Route path="/market-place/amazon-footwear-photography" element={<AmazonFootwearPhotography />} />
+        <Route path="/market-place/amazon-fashion-photography" element={<AmazonFashionPhotography />} />
+        <Route path="/market-place/amazon-medical-photography" element={<AmazonMedicalPhotography />} />
+        <Route path="/market-place/amazon-electronics-photography" element={<AmazonElectronicsPhotography />} />
+        <Route path="/market-place/amazon-grocery-photography" element={<AmazonGroceryPhotography />} />
+        <Route path="/market-place/amazon-furniture-photography" element={<AmazonFurniturePhotography />} />
+        <Route path="/market-place/amazon-automotive-photography" element={<AmazonAutomotivePhotography />} />
+        <Route path="/market-place/amazon-bikini-photography" element={<AmazonBikiniPhotography />} />
         <Route path="/market-place/Flipkart" element={<FlipkartPhotography />} />
         <Route path="/market-place/flipkart-footwear" element={<FlipkartFootwear />} />
         <Route path="/market-place/flipkart-fashion" element={<FlipkartFashion />} />
@@ -61,10 +77,14 @@ createRoot(document.getElementById('root')).render(
         <Route path="/market-place/flipkart-furniture" element={<FlipkartFurniture />} />
         <Route path="/market-place/flipkart-automotive" element={<FlipkartAutomotive />} />
         <Route path="/market-place/flipkart-bikini" element={<FlipkartBikini />} />
+<<<<<<< Updated upstream
         <Route path="/market-place/Myntra" element={<MyntraPhotography />} />
         <Route path="/market-place/myntra-footwear" element={<MyntraFootwear />} />
         <Route path="/market-place/myntra-fashion-model" element={<MyntraFashionModel />} />
         <Route path="/market-place/myntra-bikini" element={<MyntraBikini />} />
+=======
+        <Route path="/services/amazon-photography" element={<AmazonPhotography />} />
+>>>>>>> Stashed changes
         <Route path="/services/white-background" element={<WhiteBackground />} />
         <Route path="/services/hero-shots" element={<HeroShots />} />
         <Route path="/services/lifestyle-photography" element={<LifestylePhotography />} />

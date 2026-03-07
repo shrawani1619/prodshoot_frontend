@@ -10,7 +10,7 @@ function Navbar() {
 
     // Helper functions to check active section
     const isHome = currentPath === '/';
-    const isService = currentPath.startsWith('/services/');
+    const isService = currentPath !== '/' && currentPath.startsWith('/services/');
     const isIndustry = currentPath.startsWith('/market-place/');
 
     // Handle scroll for sticky background effect
@@ -56,17 +56,17 @@ function Navbar() {
             items: [
                 {
                     name: 'Amazon',
-                    path: '/services/amazon-photography',
+                    path: '/market-place/amazon-photography',
                     subItems: [
-                        { name: 'Amazon Product Photography', path: '/services/amazon-photography' },
-                        { name: 'Amazon Footwear Photography', path: '/services/amazon-photography' },
-                        { name: 'Amazon Fashion Photography', path: '/services/amazon-photography' },
-                        { name: 'Amazon Medical Product Photography', path: '/services/amazon-photography' },
-                        { name: 'Amazon Electronics Photography', path: '/services/amazon-photography' },
-                        { name: 'Amazon Grocery Product Photography', path: '/services/amazon-photography' },
-                        { name: 'Amazon Furniture Photography', path: '/services/amazon-photography' },
-                        { name: 'Amazon Automotive Product Photography', path: '/services/amazon-photography' },
-                        { name: 'Amazon Bikini Photography', path: '/services/amazon-photography' },
+                        { name: 'Amazon Product Photography', path: '/market-place/amazon-photography' },
+                        { name: 'Amazon Footwear Photography', path: '/market-place/amazon-footwear-photography' },
+                        { name: 'Amazon Fashion Photography', path: '/market-place/amazon-fashion-photography' },
+                        { name: 'Amazon Medical Product Photography', path: '/market-place/amazon-medical-photography' },
+                        { name: 'Amazon Electronics Photography', path: '/market-place/amazon-electronics-photography' },
+                        { name: 'Amazon Grocery Product Photography', path: '/market-place/amazon-grocery-photography' },
+                        { name: 'Amazon Furniture Photography', path: '/market-place/amazon-furniture-photography' },
+                        { name: 'Amazon Automotive Product Photography', path: '/market-place/amazon-automotive-photography' },
+                        { name: 'Amazon Bikini Photography', path: '/market-place/amazon-bikini-photography' },
                     ]
                 },
                 {
