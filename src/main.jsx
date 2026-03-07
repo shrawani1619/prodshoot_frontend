@@ -4,6 +4,14 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './index.css'
 import App from './App.jsx'
 import AmazonPhotography from './pages/AmazonPhotography.jsx'
+import AmazonFootwearPhotography from './pages/AmazonFootwearPhotography.jsx'
+import AmazonFashionPhotography from './pages/AmazonFashionPhotography.jsx'
+import AmazonMedicalPhotography from './pages/AmazonMedicalPhotography.jsx'
+import AmazonElectronicsPhotography from './pages/AmazonElectronicsPhotography.jsx'
+import AmazonGroceryPhotography from './pages/AmazonGroceryPhotography.jsx'
+import AmazonFurniturePhotography from './pages/AmazonFurniturePhotography.jsx'
+import AmazonAutomotivePhotography from './pages/AmazonAutomotivePhotography.jsx'
+import AmazonBikiniPhotography from './pages/AmazonBikiniPhotography.jsx'
 import FlipkartPhotography from './pages/FlipkartPhotography.jsx'
 import FlipkartFootwear from './pages/FlipkartFootwear.jsx'
 import FlipkartFashion from './pages/FlipkartFashion.jsx'
@@ -43,6 +51,14 @@ import TatacliqFurniturePhotography from './pages/TatacliqFurniturePhotography.j
 import TatacliqCosmeticPhotography from './pages/TatacliqCosmeticPhotography.jsx'
 import TatacliqMedicalPhotography from './pages/TatacliqMedicalPhotography.jsx'
 import TatacliqElectronicsPhotography from './pages/TatacliqElectronicsPhotography.jsx'
+import EtsyFootwearPhotography from './pages/EtsyFootwearPhotography.jsx'
+import EtsyFashionPhotography from './pages/EtsyFashionPhotography.jsx'
+import EtsyBikiniPhotography from './pages/EtsyBikiniPhotography.jsx'
+import EtsyElectronicsPhotography from './pages/EtsyElectronicsPhotography.jsx'
+import EtsyFurniturePhotography from './pages/EtsyFurniturePhotography.jsx'
+import EtsyHandicraftPhotography from './pages/EtsyHandicraftPhotography.jsx'
+import EtsyEcommercePhotography from './pages/EtsyEcommercePhotography.jsx'
+import EtsyFreelancerPhotography from './pages/EtsyFreelancerPhotography.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -51,7 +67,15 @@ createRoot(document.getElementById('root')).render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/services/product-photography" element={<ProductPhotography />} />
-        <Route path="/services/amazon-photography" element={<AmazonPhotography />} />
+        <Route path="/market-place/amazon-photography" element={<AmazonPhotography />} />
+        <Route path="/market-place/amazon-footwear-photography" element={<AmazonFootwearPhotography />} />
+        <Route path="/market-place/amazon-fashion-photography" element={<AmazonFashionPhotography />} />
+        <Route path="/market-place/amazon-medical-photography" element={<AmazonMedicalPhotography />} />
+        <Route path="/market-place/amazon-electronics-photography" element={<AmazonElectronicsPhotography />} />
+        <Route path="/market-place/amazon-grocery-photography" element={<AmazonGroceryPhotography />} />
+        <Route path="/market-place/amazon-furniture-photography" element={<AmazonFurniturePhotography />} />
+        <Route path="/market-place/amazon-automotive-photography" element={<AmazonAutomotivePhotography />} />
+        <Route path="/market-place/amazon-bikini-photography" element={<AmazonBikiniPhotography />} />
         <Route path="/market-place/Flipkart" element={<FlipkartPhotography />} />
         <Route path="/market-place/flipkart-footwear" element={<FlipkartFootwear />} />
         <Route path="/market-place/flipkart-fashion" element={<FlipkartFashion />} />
@@ -86,6 +110,14 @@ createRoot(document.getElementById('root')).render(
         <Route path="/market-place/tatacliq/cosmetic-photography" element={<TatacliqCosmeticPhotography />} />
         <Route path="/market-place/tatacliq/medical-photography" element={<TatacliqMedicalPhotography />} />
         <Route path="/market-place/tatacliq/electronics-photography" element={<TatacliqElectronicsPhotography />} />
+        <Route path="/market-place/etsy/footwear-photography" element={<EtsyFootwearPhotography />} />
+        <Route path="/market-place/etsy/fashion-photography" element={<EtsyFashionPhotography />} />
+        <Route path="/market-place/etsy/bikini-photography" element={<EtsyBikiniPhotography />} />
+        <Route path="/market-place/etsy/electronics-photography" element={<EtsyElectronicsPhotography />} />
+        <Route path="/market-place/etsy/furniture-photography" element={<EtsyFurniturePhotography />} />
+        <Route path="/market-place/etsy/handicraft-photography" element={<EtsyHandicraftPhotography />} />
+        <Route path="/market-place/etsy/ecommerce-photography" element={<EtsyEcommercePhotography />} />
+        <Route path="/market-place/etsy/freelancer-photography" element={<EtsyFreelancerPhotography />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
