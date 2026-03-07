@@ -18,31 +18,31 @@ const stagger = {
     animate: { transition: { staggerChildren: 0.1 } }
 };
 
-function TatacliqBikiniPhotography() {
+function EtsyFootwearPhotography() {
     const features = [
-        "On-model and ghost mannequin options",
-        "Multiple fabric texture and detail shots",
-        "Front, back, and side coverage",
-        "Lifestyle beach and studio setups",
-        "Professional model casting available",
-        "Color-accurate swimwear rendering",
-        "Platform-compliant tasteful imagery",
-        "Tata CLiQ fashion category standards met"
+        "Side, front, back & sole angle coverage",
+        "Pair shots and single-shoe hero images",
+        "Pure white & lifestyle background options",
+        "Texture and material detail close-ups",
+        "Color-accurate rendering for every shade",
+        "Handcrafted & artisan shoe styling",
+        "On-foot lifestyle shots for Etsy buyers",
+        "Etsy listing size & format compliant"
     ];
 
     const process = [
-        { step: "01", title: "Send Your Swimwear", desc: "Ship your bikini and swimwear collection to our studio — we handle all styles and sizes with care.", icon: <Package size={24} /> },
-        { step: "02", title: "Styling & Direction", desc: "Our team plans model selection, lighting setup, and art direction for each style in your collection.", icon: <Camera size={24} /> },
-        { step: "03", title: "Professional Shoot", desc: "Expert photographers work with professional models to showcase fit, design, and fabric beautifully.", icon: <Image size={24} /> },
-        { step: "04", title: "Retouching & Post", desc: "Tasteful, polished retouching that highlights product appeal while meeting platform content guidelines.", icon: <Layers size={24} /> },
-        { step: "05", title: "Delivery", desc: "Upload-ready files within 48–72 hours. Unlimited revisions until you're completely satisfied.", icon: <Zap size={24} /> },
+        { step: "01", title: "Send Your Footwear", desc: "Ship your shoes or handcrafted footwear to our studio. We handle all styles — boots, sandals, moccasins, heels, and more.", icon: <Package size={24} /> },
+        { step: "02", title: "Shot List Planning", desc: "We craft a detailed shot plan covering all required angles, lifestyle setups, and artisan detail shots for your Etsy shop.", icon: <Camera size={24} /> },
+        { step: "03", title: "Studio Photography", desc: "Footwear is propped and lit for maximum shape definition and material detail in every shot.", icon: <Image size={24} /> },
+        { step: "04", title: "Retouching & Edit", desc: "Colour correction, shadow placement, and background removal — each image polished for maximum Etsy appeal.", icon: <Layers size={24} /> },
+        { step: "05", title: "Delivery", desc: "Ready-to-upload files delivered in 24–48 hours. Unlimited revisions until you're satisfied.", icon: <Zap size={24} /> },
     ];
 
     const stats = [
-        { number: "10,000+", label: "Swimwear Styles Shot" },
-        { number: "97%", label: "Platform Approval" },
-        { number: "38%", label: "Conversion Uplift" },
-        { number: "72H", label: "Standard Delivery" },
+        { number: "15,000+", label: "Footwear Pairs Shot" },
+        { number: "97%", label: "Etsy Approval Rate" },
+        { number: "35%", label: "Higher Click-Through" },
+        { number: "48H", label: "Standard Delivery" },
     ];
 
     return (
@@ -55,13 +55,13 @@ function TatacliqBikiniPhotography() {
                     <motion.div initial="initial" animate="animate" variants={stagger}>
                         <motion.div className="hero-badge" variants={fadeUp}>
                             <Camera size={10} style={{ display: 'inline', marginRight: '6px', verticalAlign: 'middle' }} />
-                            TATA CLIQ BIKINI PHOTOGRAPHY
+                            ETSY FOOTWEAR PHOTOGRAPHY
                         </motion.div>
                         <motion.h1 className="service-hero-title display-bold" variants={fadeUp}>
-                            Tata CLiQ Bikini<br />Photography That<br />Makes Waves
+                            Etsy Footwear<br />Photography That<br />Steps Up Sales
                         </motion.h1>
                         <motion.p className="service-hero-desc" variants={fadeUp}>
-                            Swimwear demands confidence and precision in every shot. We create beautiful, platform-compliant bikini and swimwear photography that showcases fit, fabric, and style — making your Tata CLiQ listings impossible to ignore.
+                            Shoes sell on visuals. We photograph every pair — handcrafted boots to artisan sandals — with the precision and premium finish Etsy shoppers expect. Every angle, texture, and detail captured flawlessly.
                         </motion.p>
                         <motion.div className="service-hero-actions" variants={fadeUp}>
                             <Link to="/contact" style={{ textDecoration: 'none' }}>
@@ -78,7 +78,7 @@ function TatacliqBikiniPhotography() {
                 <motion.div className="service-hero-image"
                     initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: 0.3 }}>
-                    <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800&q=80" alt="Tata CLiQ bikini photography studio" />
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&q=80" alt="Etsy footwear photography studio" />
                 </motion.div>
             </section>
 
@@ -98,10 +98,10 @@ function TatacliqBikiniPhotography() {
             <section className="service-section">
                 <div className="service-section-grid">
                     <div className="service-section-text">
-                        <span className="section-label-sm">SWIMWEAR SPECIALISTS</span>
-                        <h2 className="service-section-title display-bold">Swimwear Photography With Confidence and Class</h2>
+                        <span className="section-label-sm">ETSY FOOTWEAR SPECIALISTS</span>
+                        <h2 className="service-section-title display-bold">Every Angle, Every Detail, Every Pair</h2>
                         <p className="service-section-desc">
-                            We understand the nuances of swimwear photography — from flattering angles to fabric stretch representation. Our team creates imagery that is tasteful, aspirational, and fully compliant with Tata CLiQ's content guidelines.
+                            From luxury leather to handcrafted artisan shoes, we shoot footwear that sells on Etsy. Our studio is equipped with specialised footwear props and lighting setups to make every pair look its absolute best.
                         </p>
                         <ul className="feature-checklist">
                             {features.map((f, i) => (
@@ -115,7 +115,7 @@ function TatacliqBikiniPhotography() {
                     <motion.div className="service-section-image"
                         initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }} transition={{ duration: 0.6 }}>
-                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=700&q=80" alt="Tata CLiQ swimwear photography samples" />
+                        <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=700&q=80" alt="Etsy footwear photography samples" />
                     </motion.div>
                 </div>
             </section>
@@ -124,7 +124,7 @@ function TatacliqBikiniPhotography() {
             <section className="service-section">
                 <div className="section-heading" style={{ maxWidth: '1440px', margin: '0 auto', padding: '0 2rem' }}>
                     <h2>Our Process</h2>
-                    <p>From Collection to Catalog</p>
+                    <p>From Unboxing To Etsy Listing</p>
                 </div>
                 <div className="process-timeline">
                     {process.map((step, idx) => (
@@ -144,13 +144,13 @@ function TatacliqBikiniPhotography() {
             <section className="service-section" id="custom-quote">
                 <div className="section-heading" style={{ maxWidth: '1440px', margin: '0 auto', padding: '0 2rem' }}>
                     <h2>Tailored Solutions</h2>
-                    <p>Swimwear Photography for Every Brand</p>
+                    <p>Footwear Photography Packages for Every Etsy Seller</p>
                 </div>
                 <div style={{ maxWidth: '1000px', margin: '3rem auto 0', padding: '0 2rem', textAlign: 'center' }}>
                     <div className="bottom-cta" style={{ background: 'rgba(168, 85, 247, 0.03)', border: '1px solid rgba(168, 85, 247, 0.1)' }}>
-                        <h3 className="display-bold" style={{ fontSize: '2.5rem', marginBottom: '1.5rem', color: 'white' }}>Custom Swimwear Shoot Packages</h3>
+                        <h3 className="display-bold" style={{ fontSize: '2.5rem', marginBottom: '1.5rem', color: 'white' }}>Scale Your Etsy Footwear Catalog</h3>
                         <p style={{ fontSize: '1.1rem', color: 'var(--text-muted)', lineHeight: '1.8', marginBottom: '2.5rem' }}>
-                            Whether you're launching a summer collection or building a year-round swimwear catalog, we create production packages tailored to your brand's style, budget, and Tata CLiQ timelines.
+                            From single-pair launches to 500-SKU catalogs, we tailor our production workflow to your brand's scale and Etsy listing timelines — with consistent quality across every image.
                         </p>
                         <Link to="/contact" style={{ display: 'inline-block' }}>
                             <motion.div className="cta-primary-btn" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} style={{ padding: '1rem 2.5rem' }}>
@@ -165,19 +165,19 @@ function TatacliqBikiniPhotography() {
             <section className="service-section">
                 <div className="section-heading" style={{ maxWidth: '1440px', margin: '0 auto', padding: '0 2rem' }}>
                     <h2>Sample Work</h2>
-                    <p>Swimwear Listings We've Shot</p>
+                    <p>Etsy Footwear Listings We've Shot</p>
                 </div>
                 <div className="sample-gallery">
                     {[
-                        'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80',
-                        'https://images.unsplash.com/photo-1468581264429-2548ef9eb732?w=600&q=80',
-                        'https://images.unsplash.com/photo-1509631179647-0177331693ae?w=600&q=80',
-                        'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&q=80'
+                        'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&q=80',
+                        'https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=600&q=80',
+                        'https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=600&q=80',
+                        'https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=600&q=80'
                     ].map((src, idx) => (
                         <motion.div key={idx} className="sample-item"
                             initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }} transition={{ delay: idx * 0.1 }} whileHover={{ y: -4 }}>
-                            <img src={src} alt={`Swimwear sample ${idx + 1}`} />
+                            <img src={src} alt={`Etsy footwear sample ${idx + 1}`} />
                         </motion.div>
                     ))}
                 </div>
@@ -187,13 +187,13 @@ function TatacliqBikiniPhotography() {
             <section className="service-section">
                 <div className="section-heading" style={{ maxWidth: '1440px', margin: '0 auto', padding: '0 2rem' }}>
                     <h2>Why Us</h2>
-                    <p>Swimwear Photography That Sells</p>
+                    <p>Etsy Footwear Photography That Performs</p>
                 </div>
                 <div className="why-grid" style={{ maxWidth: '1440px', margin: '0 auto', padding: '0 2rem' }}>
                     {[
-                        { icon: <Shield size={24} />, title: "Platform Compliant", desc: "Every image is tasteful and meets Tata CLiQ's content guidelines — no rejections, no re-shoots." },
-                        { icon: <Clock size={24} />, title: "Experienced Team", desc: "Our photographers and stylists have years of swimwear and lingerie shoot experience across major platforms." },
-                        { icon: <Star size={24} />, title: "Aspirational Imagery", desc: "We create swimwear images that inspire purchases — lifestyle-driven, brand-aligned, and conversion-focused." },
+                        { icon: <Shield size={24} />, title: "Expert Footwear Styling", desc: "We use specialist props, shoe shapers, and lighting rigs to ensure every pair looks its absolute best for Etsy shoppers." },
+                        { icon: <Clock size={24} />, title: "Rapid Turnaround", desc: "High-volume shoots delivered fast — ideal for new Etsy shop launches and seasonal collections." },
+                        { icon: <Star size={24} />, title: "Artisan-Ready Finish", desc: "Every image retouched to highlight craftsmanship and quality — matching the expectations of Etsy's discerning buyers." },
                     ].map((item, idx) => (
                         <motion.div key={idx} className="why-card"
                             initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
@@ -213,8 +213,8 @@ function TatacliqBikiniPhotography() {
                     <motion.div className="bottom-cta" whileHover={{ borderColor: 'rgba(168, 85, 247, 0.3)' }}>
                         <div className="bottom-cta-glow" />
                         <div className="bottom-cta-content">
-                            <h2 className="display-bold">Ready to launch your<br />swimwear collection?</h2>
-                            <p>Send us your swimwear. We'll deliver stunning, Tata CLiQ-ready images that make your listings sell out.</p>
+                            <h2 className="display-bold">Ready to elevate your<br />Etsy footwear listings?</h2>
+                            <p>Ship us your pairs. We'll deliver stunning, Etsy-ready footwear images that boost clicks and conversions.</p>
                         </div>
                         <div className="bottom-cta-actions">
                             <Link to="/contact" style={{ textDecoration: 'none' }}>
@@ -235,4 +235,4 @@ function TatacliqBikiniPhotography() {
     );
 }
 
-export default TatacliqBikiniPhotography;
+export default EtsyFootwearPhotography;

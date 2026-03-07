@@ -135,16 +135,16 @@ function Navbar() {
                 },
                 {
                     name: 'Etsy',
-                    path: '/market-place/Etsy',
+                    path: '/market-place/etsy/footwear-photography',
                     subItems: [
-                        { name: 'Etsy Footwear Photography', path: '/market-place/Etsy' },
-                        { name: 'Etsy Fashion Photography', path: '/market-place/Etsy' },
-                        { name: 'Etsy Bikini Photography', path: '/market-place/Etsy' },
-                        { name: 'Etsy Electronics Photography', path: '/market-place/Etsy' },
-                        { name: 'Etsy Furniture Photography', path: '/market-place/Etsy' },
-                        { name: 'Etsy Handicraft Photography', path: '/market-place/Etsy' },
-                        { name: 'Etsy E-Commerce Photography', path: '/market-place/Etsy' },
-                        { name: 'Etsy Freelance Photography', path: '/market-place/Etsy' },
+                        { name: 'Etsy Footwear Photography', path: '/market-place/etsy/footwear-photography' },
+                        { name: 'Etsy Fashion Photography', path: '/market-place/etsy/fashion-photography' },
+                        { name: 'Etsy Bikini Photography', path: '/market-place/etsy/bikini-photography' },
+                        { name: 'Etsy Electronics Photography', path: '/market-place/etsy/electronics-photography' },
+                        { name: 'Etsy Furniture Photography', path: '/market-place/etsy/furniture-photography' },
+                        { name: 'Etsy Handicraft Photography', path: '/market-place/etsy/handicraft-photography' },
+                        { name: 'Etsy E-Commerce Photography', path: '/market-place/etsy/ecommerce-photography' },
+                        { name: 'Etsy Freelance Photography', path: '/market-place/etsy/freelancer-photography' },
                     ]
                 },
             ]
