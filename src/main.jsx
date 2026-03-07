@@ -34,6 +34,15 @@ import About from './pages/About.jsx'
 import Portfolio from './pages/Portfolio.jsx'
 import Contact from './pages/ContactForm.jsx'
 import ScrollToTop from './components/ScrollToTop.jsx'
+import TatacliqProductPhotography from './pages/TatacliqProductPhotography.jsx'
+import TatacliqFootwearPhotography from './pages/TatacliqFootwearPhotography.jsx'
+import TatacliqFashionPhotography from './pages/TatacliqFashionPhotography.jsx'
+import TatacliqBikiniPhotography from './pages/TatacliqBikiniPhotography.jsx'
+import TatacliqEcommercePhotography from './pages/TatacliqEcommercePhotography.jsx'
+import TatacliqFurniturePhotography from './pages/TatacliqFurniturePhotography.jsx'
+import TatacliqCosmeticPhotography from './pages/TatacliqCosmeticPhotography.jsx'
+import TatacliqMedicalPhotography from './pages/TatacliqMedicalPhotography.jsx'
+import TatacliqElectronicsPhotography from './pages/TatacliqElectronicsPhotography.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -68,6 +77,15 @@ createRoot(document.getElementById('root')).render(
         <Route path="/industries/food-fmcg" element={<FoodFMCG />} />
         <Route path="/industries/electronics" element={<Electronics />} />
         <Route path="/industries/beauty-jewelry" element={<BeautyJewelry />} />
+        <Route path="/market-place/tatacliq/product-photography" element={<TatacliqProductPhotography />} />
+        <Route path="/market-place/tatacliq/footwear-photography" element={<TatacliqFootwearPhotography />} />
+        <Route path="/market-place/tatacliq/fashion-photography" element={<TatacliqFashionPhotography />} />
+        <Route path="/market-place/tatacliq/bikini-photography" element={<TatacliqBikiniPhotography />} />
+        <Route path="/market-place/tatacliq/ecommerce-photography" element={<TatacliqEcommercePhotography />} />
+        <Route path="/market-place/tatacliq/furniture-photography" element={<TatacliqFurniturePhotography />} />
+        <Route path="/market-place/tatacliq/cosmetic-photography" element={<TatacliqCosmeticPhotography />} />
+        <Route path="/market-place/tatacliq/medical-photography" element={<TatacliqMedicalPhotography />} />
+        <Route path="/market-place/tatacliq/electronics-photography" element={<TatacliqElectronicsPhotography />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />

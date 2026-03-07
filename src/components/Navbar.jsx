@@ -120,17 +120,17 @@ function Navbar() {
                 },
                 {
                     name: 'Tata cliq',
-                    path: '/market-place/Tata cliq',
+                    path: '/market-place/tatacliq/product-photography',
                     subItems: [
-                        { name: 'Tatacliq Product Photography', path: '/market-place/Tata cliq' },
-                        { name: 'Tatacliq Footwear Photography', path: '/market-place/Tata cliq' },
-                        { name: 'Tatacliq Fashion Photography', path: '/market-place/Tata cliq' },
-                        { name: 'Tatacliq Bikini Photography', path: '/market-place/Tata cliq' },
-                        { name: 'Tatacliq E-Commerce Photography', path: '/market-place/Tata cliq' },
-                        { name: 'Tatacliq Furniture Photography', path: '/market-place/Tata cliq' },
-                        { name: 'Tatacliq Cosmetic Photography', path: '/market-place/Tata cliq' },
-                        { name: 'Tatacliq Medical Photography', path: '/market-place/Tata cliq' },
-                        { name: 'Tatacliq Electronics Photography', path: '/market-place/Tata cliq' },
+                        { name: 'Tatacliq Product Photography', path: '/market-place/tatacliq/product-photography' },
+                        { name: 'Tatacliq Footwear Photography', path: '/market-place/tatacliq/footwear-photography' },
+                        { name: 'Tatacliq Fashion Photography', path: '/market-place/tatacliq/fashion-photography' },
+                        { name: 'Tatacliq Bikini Photography', path: '/market-place/tatacliq/bikini-photography' },
+                        { name: 'Tatacliq E-Commerce Photography', path: '/market-place/tatacliq/ecommerce-photography' },
+                        { name: 'Tatacliq Furniture Photography', path: '/market-place/tatacliq/furniture-photography' },
+                        { name: 'Tatacliq Cosmetic Photography', path: '/market-place/tatacliq/cosmetic-photography' },
+                        { name: 'Tatacliq Medical Photography', path: '/market-place/tatacliq/medical-photography' },
+                        { name: 'Tatacliq Electronics Photography', path: '/market-place/tatacliq/electronics-photography' },
                     ]
                 },
                 {
