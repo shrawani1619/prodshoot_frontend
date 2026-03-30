@@ -1,0 +1,1719 @@
+/* ═══════════════════════════════════════════════════════════════════
+   MOBILE-FIRST EXPERIENCE — Prodshoot
+   Premium, app-like mobile design system
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* ──────────────────────────────────────
+   TABLET BREAKPOINT (max-width: 1024px)
+   ────────────────────────────────────── */
+@media (max-width: 1024px) {
+
+  /* ── NAVBAR  ── */
+  .nav-container {
+    padding: 0 1.25rem;
+  }
+
+  .logo-img {
+    height: 36px;
+  }
+
+  /* ── GRID SYSTEM ── */
+  .grid-container {
+    grid-template-columns: 1fr;
+    padding: 90px 1.5rem 2rem;
+    gap: 2.5rem;
+  }
+
+  .hero-text-col,
+  .hero-image-container,
+  .stats-col,
+  .bento-image-card,
+  .feature-list-col,
+  .lifestyle-col {
+    grid-column: span 1 !important;
+  }
+
+  .bento-card {
+    grid-column: span 1 !important;
+  }
+
+  /* ── HERO ── */
+  .hero-image-container {
+    height: 360px;
+    border-radius: 20px;
+  }
+
+  .hero-image-container::after {
+    border-radius: 20px;
+  }
+
+  .stats-col {
+    padding-left: 0;
+  }
+
+  .stats-grid {
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: space-around;
+  }
+
+  /* ── PORTFOLIO ── */
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+  }
+
+  .portfolio-item.large,
+  .portfolio-item.tall {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+
+  /* ── WHY GRID ── */
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* ── TESTIMONIALS ── */
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* ── FAQ ── */
+  .faq-container {
+    grid-template-columns: 1fr;
+  }
+
+  .faq-side {
+    display: none;
+  }
+
+  /* ── FOOTER ── */
+  .footer-main {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  /* ── SERVICE PAGES ── */
+  .service-hero {
+    flex-direction: column;
+    padding-top: 100px;
+    gap: 2rem;
+  }
+
+  .service-hero-content {
+    max-width: 100%;
+  }
+
+  .service-hero-image {
+    max-width: 100%;
+    width: 100%;
+    height: 300px;
+  }
+
+  .service-section-grid {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .service-section-image {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .process-timeline {
+    flex-wrap: wrap;
+  }
+
+  .process-step {
+    flex: 1 1 calc(50% - 0.75rem);
+  }
+
+  .sample-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* ── INDUSTRY PAGES ── */
+  .pillars-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .minimal-cta-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+
+  /* ── PP PAGES ── */
+  .pp-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pp-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pp-testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pp-why-layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .pp-why-left {
+    position: static;
+  }
+}
+
+/* ──────────────────────────────────────
+   MOBILE BREAKPOINT (max-width: 768px)
+   Complete mobile-first app-like redesign
+   ────────────────────────────────────── */
+@media (max-width: 768px) {
+
+  /* ═══════════════════════════════════
+     GLOBAL MOBILE TOKENS
+     ═══════════════════════════════════ */
+  body {
+    font-size: 15px;
+    line-height: 1.55;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* ═══════════════════════════════════
+     NAVBAR — Compact sizing for small screens
+     ═══════════════════════════════════ */
+  .main-navbar {
+    padding: 0.5rem 0;
+  }
+
+  .main-navbar.scrolled {
+    padding: 0.4rem 0;
+  }
+
+  .nav-container {
+    padding: 0 1rem;
+  }
+
+  .logo-img {
+    height: 32px;
+  }
+
+  /* Drawer size tweak */
+  .nav-center-mobile {
+    width: 90%;
+    max-width: 360px;
+  }
+
+  /* ═══════════════════════════════════
+     MAIN GRID — Flexbox stack with
+     controlled spacing
+     ═══════════════════════════════════ */
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 80px 1.15rem 0;
+  }
+
+  /* ═══════════════════════════════════
+     HERO — Full-width immersive
+     ═══════════════════════════════════ */
+  .hero-text-col {
+    text-align: center;
+    align-items: center;
+    padding: 0;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-badge {
+    font-size: 0.58rem;
+    padding: 5px 12px;
+    margin-bottom: 1rem;
+  }
+
+  .hero-title {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+  }
+
+  .hero-desc {
+    font-size: 0.82rem;
+    line-height: 1.65;
+    max-width: 100%;
+    color: var(--text-muted);
+    margin-bottom: 0;
+  }
+
+  /* Hero image — full-bleed card */
+  .hero-image-container {
+    width: calc(100% + 2.3rem);
+    margin-left: -1.15rem;
+    margin-right: -1.15rem;
+    height: 320px;
+    border-radius: 0;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-image-container::after {
+    border-radius: 0;
+  }
+
+  /* Stats — horizontal scroll pills */
+  .stats-col {
+    padding: 0;
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+  }
+
+  .stats-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-subtle);
+    border-radius: 16px;
+    padding: 1rem 0;
+    justify-content: space-around;
+  }
+
+  .stat-box {
+    border: none;
+    padding: 0;
+    text-align: center;
+    position: relative;
+    flex: 1;
+  }
+
+  .stat-box::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 15%;
+    bottom: 15%;
+    width: 1px;
+    background: var(--border-subtle);
+  }
+
+  .stat-box:last-child::after {
+    display: none;
+  }
+
+  .stat-number {
+    font-size: 1.6rem;
+    display: block;
+  }
+
+  .stat-label {
+    font-size: 0.55rem;
+    letter-spacing: 0.08em;
+    margin-top: 0.15rem;
+  }
+
+  /* CTA Pill — full width */
+  .cta-pill {
+    padding: 0.85rem 1.25rem;
+    font-size: 0.85rem;
+    border-radius: 14px;
+  }
+
+  .cta-icon-circle {
+    width: 32px;
+    height: 32px;
+  }
+
+  /* ═══════════════════════════════════
+     TRUST BAR — Horizontal scroll
+     ═══════════════════════════════════ */
+  .trust-bar {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 0;
+    padding: 0;
+    margin: 2rem -1.15rem;
+    width: calc(100% + 2.3rem);
+    border-top: 1px solid var(--border-subtle);
+    border-bottom: 1px solid var(--border-subtle);
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .trust-bar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .trust-item {
+    flex: 0 0 auto;
+    padding: 1rem 1.25rem;
+    font-size: 0.62rem;
+    white-space: nowrap;
+    border-right: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .trust-item:last-child {
+    border-right: none;
+  }
+
+  /* ═══════════════════════════════════
+     SECTION HEADINGS — Mobile scale
+     ═══════════════════════════════════ */
+  .section-heading {
+    text-align: left;
+    margin-top: 3rem;
+    margin-bottom: 1.25rem;
+    padding: 0;
+  }
+
+  .section-heading h2 {
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+    margin-bottom: 0.4rem;
+  }
+
+  .section-heading p {
+    font-size: 1.8rem;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+  }
+
+  /* ═══════════════════════════════════
+     BENTO / SERVICE CARDS
+     Horizontal scroll on mobile
+     ═══════════════════════════════════ */
+  .bento-image-card {
+    width: calc(100% + 2.3rem);
+    margin-left: -1.15rem;
+    margin-right: -1.15rem;
+    height: 260px;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    margin-bottom: 1.25rem;
+  }
+
+  .bento-image-overlay h2 {
+    font-size: 1.35rem;
+  }
+
+  .bento-image-overlay p {
+    font-size: 0.72rem;
+  }
+
+  .bento-card {
+    border-radius: 18px;
+    padding: 1.5rem;
+    min-height: 180px;
+    margin-bottom: 1rem;
+  }
+
+  .card-label {
+    font-size: 0.62rem;
+  }
+
+  .card-price {
+    font-size: 1.8rem;
+  }
+
+  .card-desc {
+    font-size: 0.72rem;
+    line-height: 1.6;
+  }
+
+  .pill-tag {
+    font-size: 0.52rem;
+    padding: 3px 8px;
+  }
+
+  /* ═══════════════════════════════════
+     HOW IT WORKS — Compact cards
+     ═══════════════════════════════════ */
+  .feature-list-col {
+    margin-bottom: 1.5rem;
+  }
+
+  .dark-item {
+    padding: 1.25rem 1rem;
+    border-radius: 14px;
+    border-bottom: none;
+    border: 1px solid var(--border-subtle);
+    margin-bottom: 0.6rem;
+    background: rgba(255, 255, 255, 0.02);
+    border-left: 3px solid rgba(168, 85, 247, 0.3);
+  }
+
+  .dark-item .section-label {
+    font-size: 0.9rem;
+  }
+
+  .dark-item p {
+    font-size: 0.72rem;
+    line-height: 1.55;
+    max-width: 100%;
+    margin-top: 0.35rem;
+  }
+
+  .lifestyle-col {
+    width: calc(100% + 2.3rem);
+    margin-left: -1.15rem;
+    margin-right: -1.15rem;
+    height: 280px;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    margin-bottom: 0;
+  }
+
+  .lifestyle-overlay h2 {
+    font-size: 2rem;
+  }
+
+  .lifestyle-overlay {
+    padding: 1.5rem;
+  }
+
+  /* ═══════════════════════════════════
+     PORTFOLIO — 2-column grid
+     ═══════════════════════════════════ */
+  .portfolio-filters {
+    display: flex;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    gap: 0.4rem;
+    padding-bottom: 0.75rem;
+    margin: 0 -1.15rem;
+    padding-left: 1.15rem;
+    padding-right: 1.15rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .portfolio-filters::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filter-btn {
+    flex: 0 0 auto;
+    padding: 0.45rem 1rem;
+    font-size: 0.7rem;
+    white-space: nowrap;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 180px;
+    gap: 0.6rem;
+    margin-bottom: 0;
+  }
+
+  .portfolio-item,
+  .portfolio-item.large,
+  .portfolio-item.tall {
+    grid-column: span 1;
+    grid-row: span 1;
+    border-radius: 14px;
+  }
+
+  .portfolio-hover-overlay {
+    padding: 1rem;
+    opacity: 1;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, transparent 70%);
+  }
+
+  .portfolio-category {
+    font-size: 0.5rem;
+  }
+
+  .portfolio-title {
+    font-size: 0.72rem;
+    line-height: 1.2;
+  }
+
+  .portfolio-view-icon {
+    display: none;
+  }
+
+  .portfolio-meta {
+    transform: translateY(0);
+  }
+
+  /* ═══════════════════════════════════
+     WHY CHOOSE US — Horizontal scroll
+     ═══════════════════════════════════ */
+  .why-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 0.8rem;
+    padding-bottom: 1rem;
+    margin: 0 -1.15rem;
+    padding-left: 1.15rem;
+    padding-right: 1.15rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    grid-template-columns: unset;
+  }
+
+  .why-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .why-card {
+    flex: 0 0 260px;
+    scroll-snap-align: start;
+    padding: 1.5rem;
+    border-radius: 18px;
+  }
+
+  .why-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+  }
+
+  .why-card h3 {
+    font-size: 0.95rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .why-card p {
+    font-size: 0.72rem;
+    line-height: 1.6;
+  }
+
+  /* ═══════════════════════════════════
+     TESTIMONIALS — Horizontal scroll cards
+     ═══════════════════════════════════ */
+  .testimonials-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 0.8rem;
+    padding-bottom: 0.75rem;
+    margin: 0 -1.15rem;
+    padding-left: 1.15rem;
+    padding-right: 1.15rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .testimonials-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .testimonial-card {
+    flex: 0 0 280px;
+    scroll-snap-align: start;
+    padding: 1.5rem;
+    border-radius: 18px;
+    min-width: 280px;
+  }
+
+  .testimonial-text {
+    font-size: 0.8rem;
+    line-height: 1.65;
+    margin-bottom: 1.2rem;
+  }
+
+  .author-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+  }
+
+  .author-name {
+    font-size: 0.78rem;
+  }
+
+  .author-role {
+    font-size: 0.62rem;
+  }
+
+  /* ═══════════════════════════════════
+     FAQ — Clean accordion
+     ═══════════════════════════════════ */
+  .faq-container {
+    margin-bottom: 0;
+  }
+
+  .faq-question {
+    padding: 1.15rem 0.5rem;
+    font-size: 0.85rem;
+  }
+
+  .faq-answer p {
+    padding: 0 0.5rem 1.2rem;
+    font-size: 0.78rem;
+    line-height: 1.65;
+  }
+
+  .faq-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  /* ═══════════════════════════════════
+     BOTTOM CTA — Mobile card
+     ═══════════════════════════════════ */
+  .bottom-cta {
+    margin: 2.5rem -1.15rem;
+    padding: 2rem 1.5rem;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bottom-cta-content h2 {
+    font-size: 1.5rem;
+    line-height: 1.1;
+    margin-bottom: 0.6rem;
+  }
+
+  .bottom-cta-content p {
+    font-size: 0.78rem;
+    line-height: 1.6;
+    max-width: 100%;
+    margin-bottom: 0;
+  }
+
+  .bottom-cta-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.6rem;
+    align-items: stretch;
+  }
+
+  .cta-primary-btn,
+  .cta-secondary-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 0.9rem 1.5rem;
+    border-radius: 14px;
+    font-size: 0.8rem;
+  }
+
+  /* ═══════════════════════════════════
+     FOOTER — Mobile-optimized
+     ═══════════════════════════════════ */
+  .site-footer {
+    margin-top: 0;
+  }
+
+  .footer-inner {
+    padding: 2.5rem 1.15rem 1.5rem;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem 1rem;
+  }
+
+  .footer-brand-col {
+    grid-column: span 2;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .footer-brand {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .footer-brand .logo-img {
+    height: 36px;
+  }
+
+  .footer-tagline {
+    font-size: 0.78rem;
+    max-width: 280px;
+    text-align: center;
+    line-height: 1.65;
+    margin-bottom: 1.25rem;
+  }
+
+  .footer-socials {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 1rem !important;
+    margin: 0 !important;
+  }
+
+  .social-link {
+    width: 42px !important;
+    height: 42px !important;
+    flex: 0 0 42px !important;
+    border-radius: 10px;
+  }
+
+  .footer-col h4 {
+    font-size: 0.68rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .footer-col a {
+    font-size: 0.75rem;
+    padding: 0.25rem 0;
+  }
+
+  .footer-contact-item {
+    font-size: 0.72rem;
+    padding: 0.3rem 0;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+    padding-top: 1.25rem;
+    margin-top: 1.5rem;
+  }
+
+  .footer-bottom p {
+    font-size: 0.6rem;
+  }
+
+  .footer-bottom-links {
+    justify-content: center;
+    gap: 1.25rem;
+  }
+
+  .footer-bottom-links a {
+    font-size: 0.6rem;
+  }
+
+  /* ═══════════════════════════════════
+     SERVICE PAGES — Mobile
+     ═══════════════════════════════════ */
+  .service-hero {
+    padding: 90px 1.15rem 2rem;
+    gap: 1.5rem;
+  }
+
+  .service-hero-title {
+    font-size: 2.2rem;
+    line-height: 0.98;
+  }
+
+  .service-hero-desc {
+    font-size: 0.82rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .service-hero-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.6rem;
+  }
+
+  .service-hero-actions .cta-primary-btn,
+  .service-hero-actions .cta-secondary-btn {
+    width: 100%;
+    justify-content: center;
+    border-radius: 14px;
+  }
+
+  .service-hero-image {
+    height: 240px;
+    border-radius: 16px;
+  }
+
+  .service-stats-bar {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0;
+    padding: 0;
+    justify-content: stretch;
+  }
+
+  .service-stat {
+    flex: 1 1 50%;
+    padding: 1.2rem 0.5rem;
+    border-bottom: 1px solid var(--border-subtle);
+    border-right: 1px solid var(--border-subtle);
+  }
+
+  .service-stat:nth-child(2n) {
+    border-right: none;
+  }
+
+  .service-stat:nth-last-child(-n+2) {
+    border-bottom: none;
+  }
+
+  .service-stat-number {
+    font-size: 1.8rem;
+  }
+
+  .service-stat-label {
+    font-size: 0.55rem;
+  }
+
+  .service-section {
+    padding: 3rem 0;
+  }
+
+  .service-section-grid {
+    padding: 0 1.15rem;
+    gap: 2rem;
+  }
+
+  .service-section-title {
+    font-size: 1.8rem;
+    line-height: 1;
+  }
+
+  .service-section-desc {
+    font-size: 0.8rem;
+    line-height: 1.65;
+  }
+
+  .feature-checklist li {
+    font-size: 0.75rem;
+    gap: 0.5rem;
+  }
+
+  .feature-checklist li svg {
+    width: 14px;
+    height: 14px;
+    min-width: 14px;
+  }
+
+  /* Process timeline */
+  .process-timeline {
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 0 1.15rem;
+  }
+
+  .process-step {
+    flex: 1 1 100%;
+    padding: 1.25rem;
+    border-radius: 16px;
+  }
+
+  .process-step-number {
+    font-size: 2.2rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .process-step h3 {
+    font-size: 0.85rem;
+  }
+
+  .process-step p {
+    font-size: 0.7rem;
+  }
+
+  /* Sample gallery */
+  .sample-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem;
+    padding: 0 1.15rem;
+  }
+
+  .sample-item {
+    height: 180px;
+    border-radius: 14px;
+  }
+
+  /* Why grid on service pages */
+  .service-section .why-grid {
+    padding: 0 1.15rem;
+    display: flex;
+    overflow-x: auto;
+    gap: 0.8rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .service-section .why-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .service-section .why-card {
+    flex: 0 0 240px;
+    scroll-snap-align: start;
+  }
+
+  /* Section headings inside service pages */
+  .service-section .section-heading {
+    padding: 0 1.15rem;
+    text-align: left;
+  }
+
+  /* Bottom CTA on service pages */
+  .service-section .bottom-cta {
+    margin: 0;
+    border-radius: 18px;
+    padding: 2rem 1.25rem;
+    text-align: center;
+  }
+
+  .service-section .bottom-cta-content h2 {
+    font-size: 1.5rem;
+  }
+
+  /* ═══════════════════════════════════
+     INDUSTRY PAGES — Mobile
+     ═══════════════════════════════════ */
+  .modern-hero-section {
+    height: 90vh;
+    min-height: 600px;
+  }
+
+  .modern-hero-content {
+    padding: 0 1.25rem;
+  }
+
+  .editorial-title {
+    font-size: clamp(2.2rem, 10vw, 3.5rem);
+    line-height: 0.92;
+    margin-bottom: 1.5rem;
+  }
+
+  .editorial-p {
+    font-size: 0.88rem;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+  }
+
+  .btn-lux {
+    padding: 16px 32px;
+    font-size: 0.72rem;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .manifesto-section {
+    padding: 12vw 0;
+  }
+
+  .manifesto-serif {
+    font-size: clamp(1.4rem, 5vw, 2.2rem);
+    line-height: 1.3;
+  }
+
+  .pillar-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .pillar-card p {
+    font-size: 0.82rem;
+  }
+
+  /* Horizontal scroll — stacked on mobile */
+  .horizontal-section {
+    height: auto;
+  }
+
+  .horizontal-sticky {
+    position: relative;
+    height: auto;
+    padding: 8vw 1.15rem;
+  }
+
+  .horizontal-header h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+
+  .horizontal-track {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .slide-item {
+    flex: none;
+    width: 100%;
+    height: 50vw;
+    border-radius: 14px;
+  }
+
+  .slide-item.large {
+    flex: none;
+    height: 55vw;
+  }
+
+  .minimal-cta-section {
+    padding: 10vw 0;
+  }
+
+  .lux-link {
+    width: 100%;
+    font-size: 0.92rem;
+    padding: 18px 0;
+  }
+
+  /* ═══════════════════════════════════
+     PP (Product Photography) PAGES
+     ═══════════════════════════════════ */
+  .pp-container {
+    padding: 0 1.15rem;
+  }
+
+  .pp-section {
+    padding: 3.5rem 0;
+  }
+
+  .pp-section-header {
+    margin-bottom: 2.5rem;
+    text-align: left;
+  }
+
+  .pp-section-title {
+    font-size: clamp(1.6rem, 5vw, 2.4rem);
+    line-height: 1.05;
+  }
+
+  .pp-section-desc {
+    font-size: 0.85rem;
+    line-height: 1.65;
+    margin: 0;
+    text-align: left;
+  }
+
+  .pp-hero-content {
+    padding: 6rem 1.15rem 3rem;
+  }
+
+  .pp-hero-title {
+    font-size: clamp(2.2rem, 8vw, 3.5rem);
+    line-height: 0.95;
+  }
+
+  .pp-hero-desc {
+    font-size: 0.88rem;
+    line-height: 1.65;
+  }
+
+  .pp-hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .pp-btn-primary,
+  .pp-btn-secondary,
+  .pp-btn-ghost {
+    width: 100%;
+    justify-content: center;
+    padding: 0.85rem 1.5rem;
+    font-size: 0.82rem;
+    border-radius: 14px;
+  }
+
+  /* PP Stats — 2x2 grid */
+  .pp-stats-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+  }
+
+  .pp-stat-card {
+    padding: 1.5rem 1rem;
+    border-radius: 16px;
+  }
+
+  .pp-stat-number {
+    font-size: 1.8rem;
+  }
+
+  .pp-stat-label {
+    font-size: 0.65rem;
+  }
+
+  .pp-stat-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+  }
+
+  /* PP Services — horizontal scroll */
+  .pp-services-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 0.8rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    grid-template-columns: unset;
+    margin: 0 -1.15rem;
+    padding: 0 1.15rem 0.5rem;
+  }
+
+  .pp-services-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .pp-service-card {
+    flex: 0 0 260px;
+    scroll-snap-align: start;
+    padding: 1.5rem;
+    border-radius: 16px;
+  }
+
+  .pp-service-title {
+    font-size: 0.95rem;
+  }
+
+  .pp-service-desc {
+    font-size: 0.78rem;
+    line-height: 1.6;
+  }
+
+  /* PP Portfolio — 2 column  */
+  .pp-portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 180px;
+    gap: 0.6rem;
+  }
+
+  .pp-portfolio-item.large {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+
+  .pp-portfolio-item.tall {
+    grid-row: span 1;
+  }
+
+  .pp-filters {
+    justify-content: flex-start;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    scrollbar-width: none;
+    gap: 0.4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .pp-filters::-webkit-scrollbar {
+    display: none;
+  }
+
+  .pp-filter-btn {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    padding: 0.4rem 1rem;
+    font-size: 0.7rem;
+  }
+
+  /* PP Why */
+  .pp-why-left .pp-section-title,
+  .pp-why-left .pp-section-desc {
+    text-align: left;
+  }
+
+  .pp-why-item {
+    padding: 1.25rem;
+    border-radius: 14px;
+    gap: 1rem;
+  }
+
+  .pp-why-icon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    border-radius: 12px;
+  }
+
+  .pp-why-title {
+    font-size: 0.88rem;
+  }
+
+  .pp-why-desc {
+    font-size: 0.78rem;
+    line-height: 1.55;
+  }
+
+  /* PP Process — vertical timeline */
+  .pp-process-timeline {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 100%;
+  }
+
+  .pp-process-timeline::before {
+    display: none;
+  }
+
+  .pp-process-step {
+    flex-direction: row;
+    text-align: left;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 0;
+  }
+
+  .pp-process-number {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    font-size: 0.75rem;
+    margin-bottom: 0;
+  }
+
+  .pp-process-title {
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .pp-process-desc {
+    font-size: 0.78rem;
+    line-height: 1.55;
+  }
+
+  /* PP Testimonials — horizontal scroll */
+  .pp-testimonials-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 0.8rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    margin: 0 -1.15rem;
+    padding: 0 1.15rem 0.5rem;
+  }
+
+  .pp-testimonials-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .pp-testimonial-card {
+    flex: 0 0 280px;
+    scroll-snap-align: start;
+    padding: 1.5rem;
+    border-radius: 16px;
+  }
+
+  .pp-testimonial-text {
+    font-size: 0.82rem;
+    line-height: 1.6;
+  }
+
+  .pp-testimonial-name {
+    font-size: 0.82rem;
+  }
+
+  .pp-testimonial-role {
+    font-size: 0.68rem;
+  }
+
+  /* PP CTA */
+  .pp-cta-block {
+    padding: 2.5rem 1.5rem;
+    border-radius: 20px;
+  }
+
+  .pp-cta-title {
+    font-size: clamp(1.8rem, 6vw, 2.8rem);
+    line-height: 1.05;
+  }
+
+  .pp-cta-desc {
+    font-size: 0.82rem;
+    margin: 0 auto 2rem;
+  }
+
+  .pp-cta-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.6rem;
+  }
+
+  /* ═══════════════════════════════════
+     FLIPKART PAGES
+     ═══════════════════════════════════ */
+  .flipkart-services-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 0.8rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 0 1.15rem 0.5rem;
+    grid-template-columns: unset;
+  }
+
+  .flipkart-services-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .flipkart-service-card {
+    flex: 0 0 260px;
+    scroll-snap-align: start;
+    border-radius: 16px;
+  }
+
+  .flipkart-service-img {
+    height: 160px;
+  }
+
+  .flipkart-service-body {
+    padding: 1rem;
+  }
+
+  .flipkart-service-body h3 {
+    font-size: 0.85rem;
+  }
+
+  .flipkart-service-body p {
+    font-size: 0.72rem;
+  }
+
+  .flipkart-ba-container {
+    height: 220px;
+    border-radius: 16px;
+  }
+
+  /* ═══════════════════════════════════
+     CONTACT PAGE
+     ═══════════════════════════════════ */
+  .contact-form-container {
+    padding: 1.5rem;
+    border-radius: 20px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    padding: 0.85rem;
+    font-size: 0.88rem;
+    border-radius: 12px;
+  }
+
+  .form-group label {
+    font-size: 0.78rem;
+  }
+
+  .studio-location-banner {
+    grid-template-columns: 1fr;
+    border-radius: 20px;
+    margin-top: 2.5rem;
+  }
+
+  .location-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .location-visual {
+    height: 200px;
+  }
+
+  /* Contact form page */
+  .form-page-container {
+    padding: 6.5rem 1.15rem 3rem;
+  }
+
+  .form-header h1 {
+    font-size: clamp(2rem, 8vw, 3rem);
+    line-height: 1.05;
+    margin-bottom: 1rem;
+  }
+
+  .form-subtitle {
+    font-size: 0.88rem;
+    margin-bottom: 2.5rem;
+    line-height: 1.55;
+  }
+
+  .centered-form-wrapper {
+    padding: 1.75rem;
+    border-radius: 24px;
+  }
+
+  .form-group-dedicated input,
+  .form-group-dedicated textarea,
+  .form-group-dedicated select {
+    padding: 0.95rem;
+    font-size: 0.88rem;
+  }
+
+  .form-footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.25rem;
+  }
+
+  .form-quick-info {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  /* ═══════════════════════════════════
+     BLOG V2
+     ═══════════════════════════════════ */
+  .blog-v2-hero {
+    padding: 7rem 1.15rem 4rem;
+    min-height: auto;
+  }
+
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .hero-big-title {
+    font-size: clamp(2.5rem, 10vw, 3.5rem);
+  }
+
+  .hero-desc {
+    font-size: 0.88rem;
+    margin-bottom: 2rem;
+  }
+
+  .v2-search-bar {
+    max-width: 100%;
+    padding: 0.85rem 1.25rem;
+  }
+
+  .featured-mag-wrap {
+    transform: none;
+    max-width: 100%;
+  }
+
+  .mag-details {
+    padding: 1.5rem;
+  }
+
+  .mag-details h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .blog-v2-nav {
+    top: 56px;
+    padding: 0 1.15rem;
+  }
+
+  .category-scroller {
+    gap: 1.5rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .category-scroller::-webkit-scrollbar {
+    display: none;
+  }
+
+  .cat-btn {
+    font-size: 0.78rem;
+    white-space: nowrap;
+    flex: 0 0 auto;
+  }
+
+  .blog-v2-main {
+    padding: 3rem 1.15rem;
+  }
+
+  .layout-grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .blog-v2-sidebar {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .v2-post-card {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .card-media {
+    aspect-ratio: 16/10;
+    border-radius: 16px;
+  }
+
+  .card-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .card-info p {
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .card-header {
+    margin-bottom: 1rem;
+  }
+
+  /* Blog CTA */
+  .blog-v2-cta {
+    padding: 3rem 1.15rem 5rem;
+  }
+
+  .cta-v2-container {
+    border-radius: 24px;
+    padding: 4rem 1.5rem;
+  }
+
+  .cta-v2-content h2 {
+    font-size: clamp(2rem, 6vw, 3rem);
+    margin-bottom: 1.2rem;
+  }
+
+  .cta-v2-content p {
+    font-size: 0.88rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .cta-v2-btns {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .v2-btn-primary {
+    padding: 0.95rem 2rem;
+    font-size: 0.88rem;
+    border-radius: 14px;
+    justify-content: center;
+  }
+
+  .scroll-hint {
+    display: none;
+  }
+
+  /* ═══════════════════════════════════
+     ABOUT PAGE
+     ═══════════════════════════════════ */
+  .about-hero-title {
+    font-size: clamp(2rem, 7vw, 3rem) !important;
+  }
+}
+
+/* ──────────────────────────────────────
+   SMALL MOBILE (max-width: 400px)
+   Extra compact for iPhone SE / mini
+   ────────────────────────────────────── */
+@media (max-width: 400px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .stat-number {
+    font-size: 1.4rem;
+  }
+
+  .stat-label {
+    font-size: 0.5rem;
+  }
+
+  .section-heading p {
+    font-size: 1.5rem;
+  }
+
+  .portfolio-grid {
+    grid-auto-rows: 150px;
+  }
+
+  .why-card {
+    flex: 0 0 230px;
+  }
+
+  .testimonial-card {
+    flex: 0 0 250px;
+    min-width: 250px;
+  }
+
+  .editorial-title {
+    font-size: clamp(1.8rem, 9vw, 2.8rem);
+  }
+
+  .pp-hero-title {
+    font-size: clamp(1.8rem, 8vw, 2.8rem);
+  }
+}
+
+/* ──────────────────────────────────────
+   TOUCH INTERACTION IMPROVEMENTS
+   ────────────────────────────────────── */
+@media (hover: none) and (pointer: coarse) {
+  /* Minimum 44px touch targets */
+  .filter-btn,
+  .pp-filter-btn,
+  .nav-btn,
+  .cta-primary-btn,
+  .cta-secondary-btn,
+  .pp-btn-primary,
+  .pp-btn-secondary,
+  .pp-btn-ghost,
+  .faq-question,
+  .portfolio-item,
+  .cat-btn {
+    min-height: 44px;
+  }
+
+  /* Remove hover-only effects */
+  .bento-card:hover,
+  .why-card:hover,
+  .testimonial-card:hover,
+  .portfolio-item:hover {
+    transform: none;
+  }
+
+  /* Show overlay by default on portfolio items */
+  .portfolio-hover-overlay {
+    opacity: 1;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, transparent 60%);
+  }
+
+  .portfolio-meta {
+    transform: translateY(0);
+  }
+
+  .portfolio-view-icon {
+    display: none;
+  }
+
+  /* Active state feedback */
+  .filter-btn:active,
+  .pp-filter-btn:active,
+  .cta-primary-btn:active,
+  .cta-secondary-btn:active {
+    transform: scale(0.97);
+    transition: transform 0.1s ease;
+  }
+}
+
+/* ──────────────────────────────────────
+   SAFE AREA (for notched phones)
+   ────────────────────────────────────── */
+@supports (padding: env(safe-area-inset-bottom)) {
+  @media (max-width: 768px) {
+    .site-footer {
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+
+    .main-navbar {
+      padding-top: env(safe-area-inset-top);
+    }
+  }
+}

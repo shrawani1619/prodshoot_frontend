@@ -34,13 +34,13 @@ function Footer() {
 
                     <div className="footer-col">
                         <h4>Market Place</h4>
-                        <Link to="/market-place/d2c-ecommerce">Amazon</Link>
-                        <Link to="/market-place/fashion-apparel">Flipkart</Link>
-                        <Link to="/market-place/food-fmcg">Myntra</Link>
-                        <Link to="/market-place/electronics">Meesho</Link>
-                        <Link to="/market-place/beauty-jewelry">Ajio</Link>
-                        <Link to="/market-place/beauty-jewelry">Tata cliq</Link>
-                        <Link to="/market-place/beauty-jewelry">Etsy</Link>
+                        <Link to="/market-place/amazon-photography">Amazon</Link>
+                        <Link to="/market-place/Flipkart">Flipkart</Link>
+                        <Link to="/market-place/Myntra">Myntra</Link>
+                        <Link to="/market-place/Meesho">Meesho</Link>
+                        <Link to="/market-place/Ajio">Ajio</Link>
+                        <Link to="/market-place/tatacliq/product-photography">Tata cliq</Link>
+                        <Link to="/market-place/etsy/footwear-photography">Etsy</Link>
                     </div>
 
                     <div className="footer-col">
@@ -48,23 +48,23 @@ function Footer() {
                         <Link to="/about">About Us</Link>
                         <Link to="/portfolio">Portfolio</Link>
                         <Link to="/contact">Contact</Link>
-                        <a href="https://prodshoot.co.in" target="_blank" rel="noopener noreferrer">Prodshoot</a>
-                        <a href="#">Blog</a>
+                        <Link to="/">Prodshoot</Link>
+                        <Link to="/blogs">Blog</Link>
                     </div>
 
                     <div className="footer-col">
                         <h4>Contact</h4>
-                        <div className="footer-contact-item">
+                        <a href="mailto:click@prodshoot.co.in" className="footer-contact-item" style={{ textDecoration: 'none' }}>
                             <Mail size={14} />
                             <span>click@prodshoot.co.in</span>
-                        </div>
-                        <div className="footer-contact-item">
+                        </a>
+                        <a href="tel:+919356917424" className="footer-contact-item" style={{ textDecoration: 'none' }}>
                             <Phone size={14} />
                             <span>+91 93569 17424</span>
-                        </div>
+                        </a>
                         <div className="footer-contact-item">
                             <MapPin size={14} />
-                            <span>Prodshoot Studio, No. 103, 104 Madhuban Complex, Manchar 410503</span>
+                            <span>Prodshoot Studio, No. 104 Madhuban Complex, Manchar 410503</span>
                         </div>
                     </div>
                 </div>
@@ -72,9 +72,9 @@ function Footer() {
                 <div className="footer-bottom">
                     <p>© 2026 Prodshoot — Professional Product Photography Studio. All Rights Reserved.</p>
                     <div className="footer-bottom-links">
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Terms of Service</a>
-                        <a href="#">Shipping Policy</a>
+                        <Link to="/contact">Privacy Policy</Link>
+                        <Link to="/contact">Terms of Service</Link>
+                        <Link to="/contact">Shipping Policy</Link>
                     </div>
                 </div>
             </div>
